@@ -20,4 +20,26 @@ body{
 
 h1{
     color: darkgray;
+/*    font-family: "Courier New", Courier, monospace;*/
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    
+    text-decoration: underline solid rgb(68, 68, 68);
+    font-variant: small-caps;
+    text-transform: capitalize;
+}
+
+#search{
+    color: darkgray;
+/*    font-family: "Courier New", Courier, monospace;*/
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    
+}
+
+#listed{
+/*    font-family: "Courier New", Courier, monospace;*/
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-variant: small-caps;
+    text-transform: capitalize;
 }
