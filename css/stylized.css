@@ -1,0 +1,24 @@
+.is-active{
+    border-bottom: 2px solid white;
+}
+
+form{
+    width: 300px;
+    margin: 0 auto;
+    color: darkgray;
+}
+
+body{
+    background-color: #001f3f;
+}
+
+#click{
+    border: #001f3f;
+    background-color: darkgray;
+    color: #001f3f;
+}
+
+h1{
+    color: darkgray;
+}
+

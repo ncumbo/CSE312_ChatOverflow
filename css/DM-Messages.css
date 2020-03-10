@@ -1,0 +1,62 @@
+/*Messages Page*/
+u.container a.container{
+    text-decoration: none !important;
+    color: white;
+}
+
+hr{
+    border-color: white;
+}
+
+.friends-list{
+    margin: 20px;
+    color: white;
+}
+
+.friends-list img{
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 15%;
+    height: 15%;
+}
+
+.friends-list ul li{
+    position: relative;
+    list-style-type: none;
+}
+
+.friends-list ul li h4.name{
+    text-align: center;
+    display: block;
+}
+
+div.container{
+    background-color: cadetblue;
+    border-radius: 10px;
+    padding: 10px;
+    border-color: white;
+}
+
+div.container:hover{
+    margin: 5px;
+    background-color: lightgray;
+}
+
+
+/* DM Page*/
+.message-section{
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+}
+
+.text-box{
+    border-radius: 10px;
+    text-align: center;
+}
+
+.submit-button{
+    border-radius: 10px;
+}
+
