@@ -1,0 +1,48 @@
+
+.is-active{
+    border-bottom: 2px solid white;
+}
+
+form{
+    width: 300px;
+    margin: 0 auto;
+    color: darkgray;
+}
+
+body{
+    background-color: #001f3f;
+}
+
+#click{
+    border: #001f3f;
+    background-color: darkgray;
+    color: #001f3f;
+}
+
+.card {
+  max-width: 285px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 10px;
+}
+
+div.container{
+    background-color: cadetblue;
+    border-radius: 10px;
+    padding: 10px;
+    border-color: white;
+}
+
+.post-list{
+    margin: 20px;
+    color: white;
+}
+
+.posts-box {
+  background-color: white;
+  border-radius: 10px;
+  border-color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
