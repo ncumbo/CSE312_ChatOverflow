@@ -1,0 +1,66 @@
+Bootstrap report:
+
+What does this technology do for us.
+
+Bootstrap is a CSS framework that helps in making responsive apps.
+We used this framework to make our website more beautiful and responsive.
+We used for the nav bar and for aspects like tables and buttons, this 
+gives our site more functionality and more intuitive.
+
+How does this technology accomplish what it does.
+
+Bootstrap is a collection of code written in HTML CSS and javascript.
+It is a web framework that adds responsive elements. You can link the stylesheets
+in the html and use the framework throughout. Buttons are from 
+https://getbootstrap.com/docs/4.0/components/buttons/
+and are used the make them more responsive and beautiful.
+https://github.com/ncumbo/CSE312_ChatOverflow
+That link is to the github that has uses of bootstrap.
+Every page has our nav bar at the top to cycle through the pages. Taken from 
+https://getbootstrap.com/docs/4.0/components/navbar/
+This sets up links between every html page in a responsive way. 
+In the friends page there is a table that uses bootstrap to make it
+more pleasing and intuitive 
+https://getbootstrap.com/docs/4.0/content/tables/
+With all these elements it makes it easier to add responsive elements 
+instead of having to type out hundreds of lines to accomplish the same task.
+
+
+What licenses or terms of service apply.
+
+The MIT License (MIT)
+
+Copyright (c) 2011-2018 Twitter, Inc.
+Copyright (c) 2011-2018 The Bootstrap Authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+This is the license and also is included in an html page. It requires that the 
+license be included. We can freely use bootstrap and modify it to our needs. 
+However you cannot hold them responsible for any damages from using this framework.
+We also cannot
+Redistribute any piece of Bootstrap without proper attribution
+
+Use any marks owned by Twitter in any way that might state or imply that 
+Twitter endorses your distribution
+
+Use any marks owned by Twitter in any way that might state or imply 
+that you created the Twitter software in question
+
