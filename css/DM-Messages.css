@@ -31,32 +31,31 @@ hr{
 }
 
 div.container{
-    background-color: cadetblue;
+    background-color: #001f3f;
     border-radius: 10px;
     padding: 10px;
-    border-color: white;
+    border: 1px solid #5a92f2;
+    
 }
 
 div.container:hover{
     margin: 5px;
     background-color: lightgray;
+    color: white;
 }
 
 
 /* DM Page*/
 .message-section{
     padding: 10px;
-    position: absolute;
     bottom: 0;
-    align-self: center;
+    align-items: center;
 }
 
 .text-box{
     border-radius: 10px;
-    text-align: center;
 }
 
 .submit-button{
     border-radius: 10px;
 }
-
