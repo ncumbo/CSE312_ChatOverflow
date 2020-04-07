@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62947f07-360a-4501-8c00-3f4eaaead16a" name="Default Changelist" comment="" />
+    <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/chatOverflow_proj.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatOverflow_proj/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatOverflow_proj/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatOverflow_proj/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatOverflow_proj/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chatOverflow_proj/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/templates/feed/DM_Section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/templates/feed/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/templates/feed/feed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/templates/feed/friends.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/templates/feed/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/templates/feed/messages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/templates/feed/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,9 +40,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1Yr0lYYWESaUt4JFvoruWSQi8Hj" />
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\nickc\Documents\CSE 312\Project\Project Phase 2- Django\chatOverflow\chatOverflow_proj\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aBqGz6w3Iti4To25hLn26xLGy0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Project Phase 1/CSE312_ChatOverflow" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project Phase 2- Django\chatOverflow\chatOverflow_proj\feed\templates\feed" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -27,17 +71,42 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="chatOverflow_proj" type="Python.DjangoServer" factoryName="Django server">
+      <module name="chatOverflow_proj" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="62947f07-360a-4501-8c00-3f4eaaead16a" name="Default Changelist" comment="" />
-      <created>1583685562955</created>
+      <changelist id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="" />
+      <created>1586219246357</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583685562955</updated>
-      <workItem from="1583685594798" duration="70000" />
+      <updated>1586219246357</updated>
+      <workItem from="1586219285235" duration="8518000" />
     </task>
     <servers />
   </component>
@@ -54,5 +123,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
