@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CSE312_ChatOverflow.iml" filepath="$PROJECT_DIR$/.idea/CSE312_ChatOverflow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/chatOverflow_proj.iml" filepath="$PROJECT_DIR$/.idea/chatOverflow_proj.iml" />
     </modules>
   </component>
 </project>

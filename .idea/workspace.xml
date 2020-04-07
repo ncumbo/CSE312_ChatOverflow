@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62947f07-360a-4501-8c00-3f4eaaead16a" name="Default Changelist" comment="" />
+    <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,9 +11,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1Yr0lYYWESaUt4JFvoruWSQi8Hj" />
+  <component name="ProjectId" id="1aBqGz6w3Iti4To25hLn26xLGy0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project Phase 2- Django\chatOverflow\chatOverflow_proj\feed\templates\feed" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -27,17 +33,42 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="chatOverflow_proj" type="Python.DjangoServer" factoryName="Django server">
+      <module name="chatOverflow_proj" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="62947f07-360a-4501-8c00-3f4eaaead16a" name="Default Changelist" comment="" />
-      <created>1583685562955</created>
+      <changelist id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="" />
+      <created>1586219246357</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583685562955</updated>
-      <workItem from="1583685594798" duration="70000" />
+      <updated>1586219246357</updated>
+      <workItem from="1586219285235" duration="7994000" />
     </task>
     <servers />
   </component>
