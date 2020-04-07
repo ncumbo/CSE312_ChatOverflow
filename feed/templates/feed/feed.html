@@ -1,8 +1,38 @@
 {% extends "feed/base.html" %}
+
 {% block content %}
+    <div class="modal-title">
+        <h1>Feed</h1>
+    </div>
+
     {% for post in posts %}
-        <h1>{{ post.username }}</h1>
-        <p>{{ post.date }}</p>
-        <p>{{ post.post_content }}</p>
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ post.username }}</a>
+                    <small class="text-muted">{{ post.date }}</small>
+                </div>
+                <p>{{ post.post_content }}</p>
+            </div>
+            <div class="icons">
+                <button type="button" class="btn btn-default" aria-label="Left Align">
+                    <span aria-hidden="true">Like</span>
+                </button>
+                <button type="button" class="btn btn-default" aria-label="Left Align">
+                    <span aria-hidden="true">Dislike</span>
+                </button>
+                <button type="button" class="btn btn-default" aria-label="Left Align">
+                    <span aria-hidden="true">Comment</span>
+                </button>
+                <button type="button" class="btn btn-default" aria-label="Left Align">
+                    <span aria-hidden="true">Share</span>
+                </button>
+                <button type="button" class="btn btn-default" aria-label="Left Align">
+                    <span aria-hidden="true">Follow</span>
+                </button>
+            </div>
+        </article>
     {% endfor %}
+
+    <!-- Create a post section -->
 {% endblock content %}

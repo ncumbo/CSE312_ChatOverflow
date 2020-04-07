@@ -1,3 +1,4 @@
+{% load static %} <!-- loads in css file from static directory -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'feed/css/stylized.css' %}">
 
     {%  if title %}
         <Title>Chat Overflow - {{ username }}</Title>
@@ -17,11 +19,11 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="feed.html" class="nav-link">Feed</a></li>
-                    <li class="nav-item"><a href="friends.html" class="nav-link">Friends</a></li>
-                    <li class="nav-item"><a href="messages.html" class="nav-link">Messages</a></li>
-                    <li class="nav-item"><a href="profile.html" class="nav-link">My Profile</a></li>
-                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="{% url 'feed-home' %}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{% url 'feed-friends' %}" class="nav-link">Friends</a></li>
+                    <li class="nav-item"><a href="{% url 'feed-messages' %}" class="nav-link">Messages</a></li>
+                    <li class="nav-item"><a href="{% url 'feed-profile' %}" class="nav-link">My Profile</a></li>
+                    <li class="nav-item"><a href="{% url 'feed-login' %}" class="nav-link">Login</a></li>
                 </ul>
             </div>
         </nav>

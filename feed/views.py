@@ -31,4 +31,4 @@ def friends(request):
     return render(request, 'feed/friends.html')
 
 def messages(request):
-    return render(request, 'feed/messages.html')
+    return render(request, 'feed/messages.html', {'username': 'ncumbo'})

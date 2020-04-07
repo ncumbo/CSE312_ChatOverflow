@@ -2,34 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/chatOverflow_proj.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatOverflow_proj/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatOverflow_proj/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatOverflow_proj/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatOverflow_proj/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatOverflow_proj/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/templates/feed/DM_Section.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/templates/feed/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/templates/feed/feed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/templates/feed/friends.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/templates/feed/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/templates/feed/messages.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/templates/feed/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/DM-Messages.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/feed.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/stylized.css" beforeDir="false" afterPath="$PROJECT_DIR$/feed/static/feed/css/stylized.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/DM_Section.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/DM_Section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/feed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/friends.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/friends.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +31,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1aBqGz6w3Iti4To25hLn26xLGy0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -56,6 +41,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project Phase 1\CSE312_ChatOverflow\feed\static\feed" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project Phase 2- Django\chatOverflow\chatOverflow_proj\feed\templates\feed" />
     </key>
   </component>
@@ -118,13 +104,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
