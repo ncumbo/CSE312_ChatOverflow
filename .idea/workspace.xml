@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/DM-Messages.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/feed.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/stylized.css" beforeDir="false" afterPath="$PROJECT_DIR$/feed/static/feed/css/stylized.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/DM_Section.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/DM_Section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/templates/feed/feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/feed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/friends.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/friends.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,6 +17,25 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,6 +53,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Project Phase 1/CSE312_ChatOverflow" />
   </component>

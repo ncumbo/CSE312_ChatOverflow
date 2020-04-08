@@ -1,23 +1,24 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Post
 
 posts = [
     {
         'username' : 'ncumbo',
-        'post_content' : 'This corona virus thing is dumb',
-        'date' : '4/7/2020'
+        'content' : 'This corona virus thing is dumb',
+        'date_posted' : '4/7/2020'
     },
     {
         'username': 'ncumbo',
-        'post_content': 'Lets time travel with this post',
-        'date': '4/8/2020'
+        'content': 'Lets time travel with this post',
+        'date_posted': '4/8/2020'
     }
 ]
 
 # Create your home feed page
 def home(request):
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request, 'feed/feed.html', context)
 

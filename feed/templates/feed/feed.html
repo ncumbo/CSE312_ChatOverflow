@@ -3,6 +3,7 @@
 {% block content %}
     <div class="modal-title">
         <h1>Feed</h1>
+        <button align="right"><h2>Create Post:</h2></button>
     </div>
 
     {% for post in posts %}
@@ -10,9 +11,9 @@
             <div class="media-body">
                 <div class="article-metadata">
                     <a class="mr-2" href="#">{{ post.username }}</a>
-                    <small class="text-muted">{{ post.date }}</small>
+                    <small class="text-muted">{{ post.date_posted }}</small>
                 </div>
-                <p>{{ post.post_content }}</p>
+                <p>{{ post.content }}</p>
             </div>
             <div class="icons">
                 <button type="button" class="btn btn-default" aria-label="Left Align">
