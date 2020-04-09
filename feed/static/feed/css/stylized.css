@@ -109,20 +109,9 @@ hr{
     display: block;
 }
 
-/*div.container{*/
-/*    background-color: #001f3f;*/
-/*    border-radius: 10px;*/
-/*    padding: 10px;*/
-/*    border: 1px solid #5a92f2;*/
-
-/*}*/
-
-/*
-div.container:hover{
-    margin: 5px;
-    background-color: lightgray;
-    color: white;
-}*/
+.create-post{
+    float: right;
+}
 
 
 /* DM Page*/

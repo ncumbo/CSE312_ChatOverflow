@@ -3,33 +3,33 @@
 {% block content %}
     <div class="modal-title">
         <h1>Feed</h1>
-        <button align="right"><h2>Create Post:</h2></button>
+        <a href="{% url 'feed-create' %}"><button class="btn btn-info create-post" >Create Post</button></a>
     </div>
 
     {% for post in posts %}
         <article class="media content-section">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2" href="#">{{ post.username }}</a>
+                    <a class="mr-2" href="{% url 'feed-detail' post.id %}">{{ post.username }}</a>
                     <small class="text-muted">{{ post.date_posted }}</small>
                 </div>
-                <p>{{ post.content }}</p>
+                <p class="article-content" >{{ post.content }}</p>
             </div>
             <div class="icons">
-                <button type="button" class="btn btn-default" aria-label="Left Align">
-                    <span aria-hidden="true">Like</span>
+                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                    <span >Like</span>
                 </button>
-                <button type="button" class="btn btn-default" aria-label="Left Align">
-                    <span aria-hidden="true">Dislike</span>
+                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                    <span >Dislike</span>
                 </button>
-                <button type="button" class="btn btn-default" aria-label="Left Align">
-                    <span aria-hidden="true">Comment</span>
+                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                    <span>Comment</span>
                 </button>
-                <button type="button" class="btn btn-default" aria-label="Left Align">
-                    <span aria-hidden="true">Share</span>
+                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                    <span >Follow</span>
                 </button>
-                <button type="button" class="btn btn-default" aria-label="Left Align">
-                    <span aria-hidden="true">Follow</span>
+                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                    <span >Download</span>
                 </button>
             </div>
         </article>

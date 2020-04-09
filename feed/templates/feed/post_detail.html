@@ -1,0 +1,37 @@
+{% extends "feed/base.html" %}
+
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="{% url 'feed-home' %}">{{ object.username }}</a>
+                <small class="text-muted">{{ object.date_posted }}</small>
+            </div>
+            <p>{{ object.content }}</p>
+        </div>
+        <div class="icons">
+            <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                <span aria-hidden="true">Like</span>
+            </button>
+            <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                <span aria-hidden="true">Dislike</span>
+            </button>
+            <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                <span aria-hidden="true">Comment</span>
+            </button>
+            <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                <span aria-hidden="true">Follow</span>
+            </button>
+            <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                <span aria-hidden="true">Download</span>
+            </button>
+            <a href="{% url 'feed-delete' object.id %}">
+                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                    <span aria-hidden="true">Delete</span>
+                </button>
+            </a>
+        </div>
+    </article>
+
+    <!-- Comment Section -->
+{% endblock content %}

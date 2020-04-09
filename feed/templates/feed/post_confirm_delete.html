@@ -1,0 +1,13 @@
+{% extends "feed/base.html" %}
+{% block content %}
+    <div class="content-section">
+    <h2 class="modal-title align-center">Delete "{{ object.content }}" by {{ object.username }}</h2>
+        <form method="POST">
+            {% csrf_token %} <!-- Protects form against attacks -->
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Confirm</button>
+                <a href="{% url 'feed-detail' object.id %}" class="btn btn-default">No, take me back</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

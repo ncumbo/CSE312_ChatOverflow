@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 #model for everyone with accounts
 
@@ -12,3 +13,6 @@ class Post(models.Model):
 
     def __str__(self):  #dunder = double underscore
         return self.content
+
+    def get_absolute_url(self):
+        return reverse('feed-detail', kwargs={'pk': self.pk})
