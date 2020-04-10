@@ -4,6 +4,12 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .models import Post
 
+#Render to pdf
+from io import BytesIO
+from django.http import HttpResponse
+from django.template.loader import get_template
+from xhtml2pdf import pisa
+
 # Create your home feed page
 def home(request):
     context = {
@@ -60,4 +66,5 @@ class PostCreateView(CreateView):
 class PostDeleteView(DeleteView):
     model = Post
     success_url = '/'
+
 

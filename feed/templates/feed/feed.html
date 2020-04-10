@@ -3,6 +3,7 @@
 {% block content %}
     <div class="modal-title">
         <h1>Feed</h1>
+        <p>Click username to Download or Delete a post</p>
         <a href="{% url 'feed-create' %}"><button class="btn btn-info create-post" >Create Post</button></a>
     </div>
 
@@ -27,9 +28,6 @@
                 </button>
                 <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
                     <span >Follow</span>
-                </button>
-                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                    <span >Download</span>
                 </button>
             </div>
         </article>
