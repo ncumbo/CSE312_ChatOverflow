@@ -1,17 +1,23 @@
 {% extends "feed/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="content-section">
+<div class="content-section">
     <h2 class="modal-title align-center">'"What's happening?" - Twitter' - Chat Overflow</h2>
-        <form method="POST">
-            {% csrf_token %} <!-- Protects form against attacks -->
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Create a post</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-default" type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
+    <form id="create-form" method="POST">
+        {% csrf_token %} <!-- Protects form against attacks -->
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Create a post</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-default" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
 {% endblock content %}
+
+{% block javascript %}
+    <script>
+
+    </script>
+{% endblock javascript %}

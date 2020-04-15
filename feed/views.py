@@ -1,46 +1,31 @@
+import json
 from django.shortcuts import render, redirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, DetailView, CreateView, DeleteView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from django.http import JsonResponse
 from .models import Post
 
-#Render to pdf
-from io import BytesIO
-from django.http import HttpResponse
-from django.template.loader import get_template
-from xhtml2pdf import pisa
+#def post_form(request):
+#    if request.method == 'POST':
+#        form = UserCreationForm(request.POST)
+#        if form.is_valid():
+#            form.save()    #save to database
+#            username = form.cleaned_data.get('username')
+#            content = form.cleaned_data.get('content')
+#            messages.success(request, f'Post Submitted')
+#            return redirect('feed-home')
+#    else:
+#        form = UserCreationForm()
+#    return render(request, 'feed/post_form.html', {'form': form})
 
-# Create your home feed page
+# Create your home feed page - good
 def home(request):
     context = {
         'posts': Post.objects.all()
     }
     return render(request, 'feed/feed.html', context)
-
-def profile(request):
-    return render(request, 'feed/profile.html', {'username': 'ncumbo'})
-
-def login(request):
-    return render(request, 'feed/login.html')
-
-def friends(request):
-    return render(request, 'feed/friends.html')
-
-def messages(request):
-    return render(request, 'feed/messages.html', {'username': 'ncumbo'})
-
-def post_form(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            content = form.cleaned_data.get('content')
-            messages.success(request, f'Post Submitted')
-            return redirect('feed-home')
-    else:
-        form = UserCreationForm()
-    return render(request, 'feed/post_form.html', {'form': form})
 
 #Works
 class PostListView(ListView):
@@ -52,19 +37,24 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = Post
 
-
-class PostCreateView(CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['content']
     success_url = '/'
 
-    def form_valid(self, form):
+    def form_valid(self, form): #overriding createView to add author before form submitted
         form.instance.username = self.request.user    #set author to current signed in user
-        return super().form_valid(form)
+        return super().form_valid(form) 
 
-#delete a post
-class PostDeleteView(DeleteView):
+    #something here for ajax
+
+
+class PostDeleteView(LoginRequiredMixin, DeleteView):
     model = Post
     success_url = '/'
 
+def friends(request):
+    return render(request, 'feed/friends.html')
 
+def messages(request):
+    return render(request, 'feed/messages.html', {'username': 'ncumbo'})

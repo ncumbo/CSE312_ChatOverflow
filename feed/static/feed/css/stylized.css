@@ -69,6 +69,10 @@ img{
     border-color: #5a92f2;
 }
 
+input, input:focus{
+    color: white;
+}
+
 .btn:hover{
     background: #001f3f;
 }

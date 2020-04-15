@@ -22,9 +22,11 @@
             <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
                 <span aria-hidden="true">Follow</span>
             </button>
-            <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                <span aria-hidden="true">Download</span>
-            </button>
+            <a href="{% url 'feed-download' object.pk %}" download>
+                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+                    <span aria-hidden="true">Download</span>
+                </button>
+            </a>
             <a href="{% url 'feed-delete' object.id %}">
                 <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
                     <span aria-hidden="true">Delete</span>
