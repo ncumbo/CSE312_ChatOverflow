@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 #add applications to this list everytime you create an application
 INSTALLED_APPS = [
-    #'channels',
+    'channels',
     'users.apps.UsersConfig',
     'feed.apps.FeedConfig',
     'crispy_forms',
@@ -121,9 +121,9 @@ USE_L10N = True
 USE_TZ = True
 
 #choose css frameworks to use
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-#ASGI_APPLICATION = 'feed.routing.application'
+ASGI_APPLICATION = 'feed.routing.application'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
