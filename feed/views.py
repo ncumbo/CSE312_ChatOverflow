@@ -2,25 +2,9 @@ import json
 from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, DetailView, CreateView, DeleteView
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib import messages
-from django.http import JsonResponse
+from django_xhtml2pdf.views import PdfMixin
 from .models import Post
 
-#def post_form(request):
-#    if request.method == 'POST':
-#        form = UserCreationForm(request.POST)
-#        if form.is_valid():
-#            form.save()    #save to database
-#            username = form.cleaned_data.get('username')
-#            content = form.cleaned_data.get('content')
-#            messages.success(request, f'Post Submitted')
-#            return redirect('feed-home')
-#    else:
-#        form = UserCreationForm()
-#    return render(request, 'feed/post_form.html', {'form': form})
-
-# Create your home feed page - good
 def home(request):
     context = {
         'posts': Post.objects.all()
@@ -36,6 +20,10 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
+
+class PostDownloadPDF(PdfMixin, DetailView):
+    model = Post
+    template_name = "feed/post_detail.html"
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
