@@ -16,22 +16,24 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:pp2-nick-linux" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/feed/migrations/0002_post_likes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatOverflow_proj/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatOverflow_proj/routing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatOverflow_proj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatOverflow_proj/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/consumers.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/routing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/static/feed/css/stylized.css" beforeDir="false" afterPath="$PROJECT_DIR$/feed/static/feed/css/stylized.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/templates/feed/feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/feed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/post_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +69,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/ncumbo/CSE312_ChatOverflow.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1aBqGz6w3Iti4To25hLn26xLGy0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -136,7 +145,7 @@
       <workItem from="1586799557879" duration="11226000" />
       <workItem from="1586832884111" duration="458000" />
       <workItem from="1587054027730" duration="17264000" />
-      <workItem from="1587152560079" duration="2897000" />
+      <workItem from="1587152560079" duration="6565000" />
     </task>
     <servers />
   </component>

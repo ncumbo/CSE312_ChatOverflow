@@ -10,11 +10,9 @@
             <p>{{ object.content }}</p>
         </div>
         <div class="icons">
-            <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+            <button type="button" class="likebtn btn btn-sm mt-1 mb-1" aria-label="Left Align">
                 <span aria-hidden="true">Like</span>
-            </button>
-            <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                <span aria-hidden="true">Dislike</span>
+                <p> {{ object.likes.count }}</p>
             </button>
             <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
                 <span aria-hidden="true">Comment</span>
@@ -37,3 +35,14 @@
 
     <!-- Comment Section -->
 {% endblock content %}
+
+{% block javascript %}
+    <script>
+        $(".likebtn").click(function(evt){
+            evt.preventDefault();
+            var currentLikeCount = {{ object.likes.count }};
+            currentLikeCount += 1;
+            console.log(currentLikeCount)
+        })
+    </script>
+{% endblock javascript %}

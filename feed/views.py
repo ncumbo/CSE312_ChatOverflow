@@ -1,7 +1,7 @@
 import json
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import ListView, DetailView, CreateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, RedirectView
 from django_xhtml2pdf.views import PdfMixin
 from .models import Post
 
@@ -40,6 +40,16 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 class PostDeleteView(LoginRequiredMixin, DeleteView):
     model = Post
     success_url = '/'
+
+class PostLike(RedirectView):
+    def get_redirect_url(self, *args, **kwargs):
+        slug = self.kwargs.get("slug")
+        obj = get_object_or_404(Post, slug=slug)
+        url = obj.get_absolute_url()
+        user = self.request.user
+        if user.is_authenticated():
+            obj.likes.add(user)
+        return 1
 
 def friends(request):
     return render(request, 'feed/friends.html')
