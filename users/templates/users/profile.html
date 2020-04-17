@@ -1,0 +1,23 @@
+{% extends "feed/base.html" %}
+{% load static %} <!-- loads in css file from static directory -->
+
+
+{% block stylesheet %}
+   <link rel="stylesheet" type="text/css" href="{% static 'users/css/profile.css' %}">
+{% endblock stylesheet %}
+
+
+
+{% block content %}
+	<div class='content-section'>
+		<div class='media_block'>
+			<div class='media-body'>
+				<img class='rounded-circle account-img' src=" {{user.profile.image.url}} ">
+				<h1 class='user-heading'> {{user.username}} </h1>
+				<h5 class='user-bio'> {{user.bio}} </h5>	
+			</div>
+		</div>
+	</div>
+{% endblock content %}
+
+
