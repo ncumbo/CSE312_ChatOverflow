@@ -74,7 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'chatOverflow_proj.wsgi.application'
-ASGI_APPLICATION = "chatOverflow_proj.routing.application'"
+ASGI_APPLICATION = "chatOverflow_proj.routing.application"
 
 
 # Database
