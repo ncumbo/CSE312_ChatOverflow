@@ -11,6 +11,10 @@ class Post(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)   #sets date/time when post is created
     username = models.ForeignKey(User, on_delete=models.CASCADE)      #related table is User. If user is deleted, delete posts as well
 
+    #like = models.Count
+    #dislike = models.Count
+    #comment = models.TextField(max_length=280)
+
     def __str__(self):  #dunder = double underscore
         return self.content
 
