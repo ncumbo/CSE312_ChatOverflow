@@ -1,0 +1,37 @@
+{% extends "feed/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %} <!-- loads in css file from static directory -->
+
+
+{% block stylesheet %}
+   <link rel="stylesheet" type="text/css" href="{% static 'users/css/profile.css' %}">
+{% endblock stylesheet %}
+
+
+
+{% block content %}
+	<div class='content-section'>
+		<div class='media_block'>
+			<div class='media-body'>
+				<img class='rounded-circle account-img' src=" {{user.profile.image.url}} ">
+				<h1 class='user-heading'> {{user.username}} </h1>
+				<p class='text-secondary'> {{profile.user_bio}} </p>	
+			</div>
+		</div>
+	</div>
+
+	<form method="POST" enctype="multipart/form-data">
+	    {% csrf_token %}
+        <fieldset class="form-group">
+		        <legend class="border-bottom mb-4">Profile Info</legend>
+			    {{ user_update|crispy }}
+			    {{ profile_update|crispy }}
+	    </fieldset>
+	    <div class="form-group">
+	        <button class="btn btn-default" type="submit">Update Profile</button>
+	    </div>
+	</form>
+
+{% endblock content %}
+
+
