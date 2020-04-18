@@ -1,0 +1,39 @@
+Django report:
+
+What does this technology do for us.
+
+This is a open source framework used with python for web applications.
+Django makes backend development much easier by processing HTTP requests
+for us. It takes the requests and makes the respnonses based off of
+templates we have setup. It handles backend TCP server action
+to save time on creating it from the ground up.
+ 
+How does this technology accomplish what it does.
+
+For handling HTTP requests and sending responses it takes in the request 
+in urls.py then sends them to views.py where it handles the request and 
+gives HTTP responses and getting data from models.py when needed. 
+Models contain objects the define behavior of the application. This all
+comes together with an html template. The views can create a page off the 
+html template and fill it with the data from the models.
+
+
+https://docs.djangoproject.com/en/3.0/
+https://docs.djangoproject.com/en/3.0/intro/tutorial01/
+Models: https://docs.djangoproject.com/en/3.0/topics/db/models/
+Views: https://docs.djangoproject.com/en/3.0/topics/http/urls/
+Templates: https://docs.djangoproject.com/en/3.0/topics/templates/
+
+Now django also has built in database features so we can avoid dealing
+with heavy sql code. Running migrate sets up tables in the database based off
+the content you placed in settings.py. Creating the models will be the database loadout.
+
+Database: https://docs.djangoproject.com/en/3.0/intro/tutorial02/
+
+Django also uses websockets through django channels to update pages without a refresh.
+
+
+What licenses or terms of service apply.
+
+The trademark and license 
+https://www.djangoproject.com/trademarks/
