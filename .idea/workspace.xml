@@ -16,24 +16,29 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:pp2-nick-linux" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/feed/migrations/0002_post_likes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/profile_photos/default_image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/migrations/0002_auto_20200418_0054.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/static/users/css/profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatOverflow_proj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatOverflow_proj/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatOverflow_proj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatOverflow_proj/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/feed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/static/feed/images/default_image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/default_image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/static/feed/images/k_aid123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/static/feed/images/ncumbo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,19 +94,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/feed" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/profile_photos" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/feed" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/media" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project\CSE312_ChatOverflow\feed\static\feed" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project\CSE312_ChatOverflow\feed\static" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project\CSE312_ChatOverflow\chatOverflow_proj" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project Phase 1\CSE312_ChatOverflow\feed\static\feed" />
-      <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project Phase 2- Django\chatOverflow\chatOverflow_proj\feed\templates\feed" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/media/profile_photos" />
+      <recent name="$PROJECT_DIR$/feed" />
     </key>
   </component>
   <component name="RunManager">

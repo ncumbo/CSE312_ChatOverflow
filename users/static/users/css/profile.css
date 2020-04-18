@@ -1,0 +1,38 @@
+.is-active{
+    border-bottom: 2px solid white;
+}
+
+body{
+    background-color: #001f3f;
+}
+
+.media-body {
+    color: white;
+    padding-left: 10px;
+}
+
+.user-heading {
+    text-align: center;
+    display: inline-block;
+}
+
+.user-bio {
+    color: white;
+}
+.content-section {
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.account-img{
+    padding: 5px;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 25%;
+    height: 25%;
+    margin-right: 15px;
+    display: inline-block;
+}
