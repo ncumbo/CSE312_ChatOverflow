@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/feed/migrations/0006_post_comments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/feed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" afterDir="false" />
-    </list>
+    <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +113,7 @@
       <workItem from="1586832884111" duration="458000" />
       <workItem from="1587054027730" duration="17264000" />
       <workItem from="1587152560079" duration="6565000" />
-      <workItem from="1587225474519" duration="21102000" />
+      <workItem from="1587225474519" duration="21445000" />
     </task>
     <servers />
   </component>
@@ -174,10 +168,11 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="67" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1587055210507" />
-    <state x="356" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1587154267006">
+    <state x="356" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1587327687330">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="356" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1587154267006" />
+    <state x="356" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1587327687330" />
     <state x="656" y="257" key="search.everywhere.popup/67.27.3773.1053@67.27.3773.1053" timestamp="1587063467197" />
     <state x="2335" y="455" width="540" height="194" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1587062109034">
       <screen x="67" y="27" width="3773" height="1053" />
