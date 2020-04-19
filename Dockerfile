@@ -1,24 +1,12 @@
-#ATTEMPT 2
-FROM nginx:alpine
-COPY . /usr/share/nginx/html
-
-#delete all containers "docker rm -f $(docker ps -a -q)"
-
-
-##ATTEMPT 1
-#Getting base image ubuntu
-#FROM ubuntu:18.04
-
-#RUN apt-get update
-
-#ENV HOME /
-#WORKDIR /
-
-#COPY . .
-
-#EXPOSE 8000
-
-#CMD ["echo", "Hello World!"]
+#Attempt 3
+FROM python:3
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /code
+WORKDIR /code
+ADD requirements.txt /code/
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+ADD . /code/
 
 #cd to folder, run "docker build ." or "docker build -t projectphase:1.0 ." <- specifes tag 
 #run "docker images" to view images & get its ID

@@ -1,2 +1,10 @@
 from django import forms
-from django.contrib.auth.models import User
+from .models import Post
+
+class Upload():
+
+    image = forms.FileField(required=False)
+
+    class Meta:
+        model = Post
+        fields = ('content', 'image')

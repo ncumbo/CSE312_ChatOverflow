@@ -10,9 +10,9 @@ urlpatterns = [
     path('new/', PostCreateView.as_view(), name='feed-create'),
     path('feed/<int:pk>/like/', PostLike.as_view(), name='feed-like'),
 
-    #path(),
     path('friends/', views.friends, name='feed-friends'),
     path('messages/', views.messages, name='feed-messages')
 ]
 
 #<app>/<model>_<viewtype>.html naming convention
+

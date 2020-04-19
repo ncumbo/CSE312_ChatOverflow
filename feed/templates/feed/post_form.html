@@ -2,16 +2,16 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="content-section">
-    <h2 class="modal-title align-center">'"What's happening?" - Twitter' - Chat Overflow</h2>
-    <form id="create-form" method="POST"> <!--replace POST for websocket-->
+    <h2 class="modal-title align-center">Submit a photo that cooresponds with your post! </h2>
+    <hr/>
+    <legend class="border-bottom mb-4">Create a post</legend>
+    <form id="create-form" method="POST" enctype="multipart/form-data"> <!--replace POST for websocket-->
         {% csrf_token %} <!-- Protects form against attacks -->
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Create a post</legend>
             {{ form|crispy }}
         </fieldset>
         <div class="form-group">
             <input type="submit" id="form-data" class="btn btn default" value="Submit"/>
-            <!--<button id="form-data" class="btn btn-default" type="submit">Submit</button>-->
         </div>
     </form>
 </div>
