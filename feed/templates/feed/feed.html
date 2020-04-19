@@ -22,13 +22,12 @@
             </div>
             <div class="icons">
                 <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                    <span >Like</span>
+                    <span >Likes</span>
+                    <p> {{ post.likes.count }}</p>
                 </button>
                 <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                    <span>Comment</span>
-                </button>
-                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                    <span >Follow</span>
+                    <span>Comments</span>
+                    <p> 0 {{ post.comments.count }}</p>
                 </button>
             </div>
         </article>

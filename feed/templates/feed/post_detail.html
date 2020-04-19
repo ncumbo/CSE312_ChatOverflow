@@ -8,6 +8,7 @@
                 <small class="text-muted">{{ object.date_posted }}</small>
             </div>
             <p>{{ object.content }}</p>
+            <img class src="{{ post.image.url }}">
         </div>
         <div class="icons">
             <button type="button" class="likebtn btn btn-sm mt-1 mb-1" aria-label="Left Align">
@@ -16,9 +17,11 @@
             </button>
             <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
                 <span aria-hidden="true">Comment</span>
+                <p> 0 {{ post.comments.count }}</p>
             </button>
             <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                <span aria-hidden="true">Follow</span>
+                <span >Follow</span>
+                <p>0</p>
             </button>
             <a href="{% url 'feed-download' object.pk %}" download>
                 <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">

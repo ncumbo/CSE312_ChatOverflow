@@ -14,7 +14,7 @@ class Post(models.Model):
     image = models.FileField(default='default_image.jpg', upload_to='meme_photos')
 
     likes = models.ManyToManyField(User, blank=True, related_name='likes')
-    #comments = models.TextField(max_length=280)
+    comments = models.TextField(max_length=280)
 
     def __str__(self):  #dunder = double underscore
         return self.content
