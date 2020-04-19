@@ -7,14 +7,14 @@ Django makes backend development much easier by processing HTTP requests
 for us. It takes the requests and makes the respnonses based off of
 templates we have setup. It handles backend TCP server action
 to save time on creating it from the ground up.
-
+ 
 How does this technology accomplish what it does.
 
-For handling HTTP requests and sending responses it takes in the request
-in urls.py then sends them to views.py where it handles the request and
-gives HTTP responses and getting data from models.py when needed.
+For handling HTTP requests and sending responses it takes in the request 
+in urls.py then sends them to views.py where it handles the request and 
+gives HTTP responses and getting data from models.py when needed. 
 Models contain objects the define behavior of the application. This all
-comes together with an html template. The views can create a page off the
+comes together with an html template. The views can create a page off the 
 html template and fill it with the data from the models.
 
 
@@ -35,5 +35,5 @@ Django also uses websockets through django channels to update pages without a re
 
 What licenses or terms of service apply.
 
-The trademark and license
+The trademark and license 
 https://www.djangoproject.com/trademarks/
