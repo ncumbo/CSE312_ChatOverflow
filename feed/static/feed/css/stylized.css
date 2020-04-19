@@ -22,6 +22,10 @@ h1, p, small{
     color: darkgray;
 }
 
+#id_image{
+    color: white;
+}
+
 /* feed */
 .modal-title{
     margin-top: 10px;
@@ -40,10 +44,18 @@ h1, p, small{
 }
 
 .container{
-    color: white;
+    color: grey;
 }
 
-img{
+.text{
+    color: black;
+}
+
+.image{
+    color: #5a92f2;
+}
+
+.profile-img{
     padding: 5px;
     border: 3px solid white;
     border-radius: 50%;
@@ -70,11 +82,12 @@ img{
 }
 
 input, input:focus{
-    color: white;
+    color: black;
 }
 
 .btn:hover{
     background: #001f3f;
+    color: white;
 }
 
 span{

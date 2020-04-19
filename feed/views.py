@@ -1,9 +1,13 @@
-import json
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, RedirectView
 from django_xhtml2pdf.views import PdfMixin
 from .models import Post
+
+from django import forms
+
+from django.core.files.storage import FileSystemStorage
+from .forms import Upload
 
 def home(request):
     context = {
@@ -27,7 +31,8 @@ class PostDownloadPDF(PdfMixin, DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['content']
+    fields = ['content', 'image']
+
     success_url = '/'
 
     def form_valid(self, form): #overriding createView to add author before form submitted
@@ -56,3 +61,13 @@ def friends(request):
 
 def messages(request):
     return render(request, 'feed/messages.html', {'username': 'ncumbo'})
+#
+# def upload(request):
+#     content = {}
+#     if request.method == 'POST':
+#         uploads = request.FILES['file']
+#         file = FileSystemStorage()
+#         name = file.save(uploads.name, uploads)
+#         content['url'] = file.url(name)
+#     return render(request, 'feed/feed2.html', content)
+#
