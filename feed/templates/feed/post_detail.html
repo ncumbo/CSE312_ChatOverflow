@@ -8,41 +8,68 @@
                 <small class="text-muted">{{ object.date_posted }}</small>
             </div>
             <p>{{ object.content }}</p>
+            <img class src="{{ post.image.url }}">
         </div>
         <div class="icons">
-            <button type="button" class="likebtn btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                <span aria-hidden="true">Like</span>
-                <p> {{ object.likes.count }}</p>
+            <button type="button" id="likebtn" class="btn btn-sm mt-1 mb-1" >
+                <span>Like</span>
+                <p id="like"> {{ post.likes.count }}</p>
             </button>
-            <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                <span aria-hidden="true">Comment</span>
+            <button type="button" class="btn btn-sm mt-1 mb-1">
+                <span>Comment</span>
+                <p>{{ comments.count }}</p>
             </button>
-            <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                <span aria-hidden="true">Follow</span>
+            <button type="button" class="btn btn-sm mt-1 mb-1">
+                <span >Follow</span>
+                <p>0</p>
             </button>
-            <a href="{% url 'feed-download' object.pk %}" download>
-                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                    <span aria-hidden="true">Download</span>
+            <a href="{% url 'feed-download' post.pk %}" download>
+                <button type="button" class="btn btn-sm mt-1 mb-1">
+                    <span>Download</span>
                 </button>
             </a>
-            <a href="{% url 'feed-delete' object.id %}">
-                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                    <span aria-hidden="true">Delete</span>
+            <a href="{% url 'feed-delete' post.id %}">
+                <button type="button" class="btn btn-sm mt-1 mb-1">
+                    <span>Delete</span>
                 </button>
             </a>
         </div>
     </article>
 
-    <!-- Comment Section -->
+    <br/><br/>
+
+
+    <h2>Comments</h2>
+    {% for comment in comments %}
+        <div class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <strong>{{ comment.user }}</strong>
+                <small class="text-muted">{{ comment.date_posted }}</small>
+            </div>
+            <div class="article-content">{{ comment.content }}</div>
+        </div>
+        </div>
+    {% endfor %}
+
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button type="button" class="btn btn-sm mt-1 mb-1">Submit</button>
+         </form>
+    </div>
+
+
 {% endblock content %}
 
 {% block javascript %}
     <script>
-        $(".likebtn").click(function(evt){
-            evt.preventDefault();
-            var currentLikeCount = {{ object.likes.count }};
-            currentLikeCount += 1;
-            console.log(currentLikeCount)
-        })
+        document.getElementById("likebtn").addEventListener("click", function(e){
+            var currentLike = parseInt(document.getElementById("like").innerText);
+            currentLike += 1;
+            document.getElementById("like").innerText = currentLike;
+            console.log(currentLike);
+        });
     </script>
 {% endblock javascript %}

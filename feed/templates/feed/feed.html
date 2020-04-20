@@ -20,23 +20,19 @@
                 <p class="article-content" >{{ post.content }}</p>
                 <img class src="{{ post.image.url }}">
             </div>
+
             <div class="icons">
                 <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                    <span >Like</span>
+                    <span >Likes</span>
                 </button>
+                <a href="{% url 'feed-detail' post.id %}">
                 <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                    <span>Comment</span>
+                    <span>Comments</span>
                 </button>
-                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                    <span >Follow</span>
-                </button>
+                </a>
             </div>
         </article>
     {% endfor %}
 
     <!-- Create a post section -->
 {% endblock content %}
-
-{% block javascript %}
-
-{% endblock javascript %}

@@ -1,13 +1,14 @@
+from django.http import HttpResponseRedirect, HttpResponseForbidden
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse
+from django.views.generic.edit import FormMixin
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, RedirectView
 from django_xhtml2pdf.views import PdfMixin
-from .models import Post
+from .models import Post, Comment
 
 from django import forms
-
-from django.core.files.storage import FileSystemStorage
-from .forms import Upload
+from .forms import CommentForm
 
 def home(request):
     context = {
@@ -22,12 +23,23 @@ class PostListView(ListView):
     context_object_name = 'posts'
     ordering = ['-date_posted'] #chronological ordering
 
-class PostDetailView(DetailView):
+class PostDetailView(FormMixin, DetailView):
     model = Post
+    form_class = CommentForm
+
+    def get_context_data(self, **kwargs):
+        context = super(PostDetailView, self).get_context_data()
+        print(kwargs)
+        print(self.kwargs.get('pk'))
+        print(Comment.objects.filter(post_id=self.kwargs.get('pk')))
+
+        context['comments'] = Comment.objects.filter(post_id=self.kwargs.get('pk'))
+        return context
+
+
 
 class PostDownloadPDF(PdfMixin, DetailView):
     model = Post
-    template_name = "feed/post_detail.html"
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
@@ -61,13 +73,3 @@ def friends(request):
 
 def messages(request):
     return render(request, 'feed/messages.html', {'username': 'ncumbo'})
-#
-# def upload(request):
-#     content = {}
-#     if request.method == 'POST':
-#         uploads = request.FILES['file']
-#         file = FileSystemStorage()
-#         name = file.save(uploads.name, uploads)
-#         content['url'] = file.url(name)
-#     return render(request, 'feed/feed2.html', content)
-#

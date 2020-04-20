@@ -14,11 +14,19 @@ class Post(models.Model):
     image = models.FileField(default='default_image.jpg', upload_to='meme_photos')
 
     likes = models.ManyToManyField(User, blank=True, related_name='likes')
-    #comments = models.TextField(max_length=280)
 
     def __str__(self):  #dunder = double underscore
         return self.content
 
     def get_absolute_url(self):
         return reverse('feed-detail', kwargs={'pk': self.pk})
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.TextField(max_length=280)
+    date_posted = models.DateTimeField(default=timezone.now)  # sets date/time when post is created
+
+    def __str__(self):
+        return '{} commented on {}'.format(str(self.user.username), str(self.post.username))
 
