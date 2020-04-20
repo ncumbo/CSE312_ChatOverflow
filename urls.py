@@ -1,0 +1,18 @@
+from django.urls import path
+from .views import PostListView, PostDetailView, PostCreateView, PostDeleteView
+from . import views
+
+urlpatterns = [
+    path('', PostListView.as_view(), name='feed-home'),
+    path('feed/<int:pk>/', PostDetailView.as_view(), name='feed-detail'),   #works
+    path('feed/<int:pk>/delete/', PostDeleteView.as_view(), name='feed-delete'),
+    path('feed/<int:pk>/download/', PostDetailView.as_view(), name='feed-download'),
+    path('new/', PostCreateView.as_view(), name='feed-create'),
+    path('create/', PostCreateView.as_view(), name='feed-cre'),
+
+    path('friends/', views.friends, name='feed-friends'),
+    path('messages/', views.messages, name='feed-messages'),
+    path('likes/', views.like_post, name='like_post'),
+]
+
+#<app>/<model>_<viewtype>.html naming convention

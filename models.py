@@ -1,0 +1,22 @@
+from django.db import models
+from django.utils import timezone
+from django.contrib.auth.models import User
+from django.urls import reverse
+
+#model for everyone with accounts
+
+class Post(models.Model):
+    #fields for a post. what django database will hold
+    likes = models.ManyToManyField(User, related_name='likes', blank=True)
+    content = models.TextField(max_length=280)  #sets 280 characters per post
+    date_posted = models.DateTimeField(default=timezone.now)   #sets date/time when post is created
+    username = models.ForeignKey(User, on_delete=models.CASCADE)      #related table is User. If user is deleted, delete posts as well
+
+    def __str__(self):  #dunder = double underscore
+        return self.content
+
+    def total_likes(self):
+        return self.likes.count()
+
+    def get_absolute_url(self):
+        return reverse('feed-detail', kwargs={'pk': self.pk})
