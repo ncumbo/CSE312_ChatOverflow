@@ -4,7 +4,7 @@ services:
   db:
     image: postgres
     environment:
-      - POSTGRES_DB=cysxcdsu
+      - POSTGRES_DB=postgres
       - POSTGRES_USER=cysxcdsu
       - POSTGRES_PASSWORD=L7NuZOttAw_QaIlTdXakyKXW2xerb-56
   web:

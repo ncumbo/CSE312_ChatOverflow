@@ -7,9 +7,7 @@
     <legend class="border-bottom mb-4">Create a post</legend>
     <form id="create-form" method="POST" enctype="multipart/form-data"> <!--replace POST for websocket-->
         {% csrf_token %} <!-- Protects form against attacks -->
-        <fieldset class="form-group">
             {{ form|crispy }}
-        </fieldset>
         <div class="form-group">
             <input type="submit" id="form-data" class="btn btn default" value="Submit"/>
         </div>
@@ -18,33 +16,5 @@
 {% endblock content %}
 
 {% block javascript %}
-    <script>
-        const form = $("#create-form");    //get the data from the form
-        const contentMsg = $("#id_content");
-        const socket = new WebSocket('ws//' + window.location.host + '/');
 
-        socket.onmessage = function (evt) {
-            const data = JSON.parse(e.data);
-            //append this value to screen
-        };
-
-        socket.onclose = function (evt) {
-            console.error('WebSocket closed. Sad')
-        };
-
-        socket.onopen = function(evt){
-            console.log(evt);
-            form.submit(function (evt) {
-                evt.preventDefault()
-                var dataSerialized = form.serialize();  //not ideal
-                var data = {
-                    'message': contentMsg.val()
-                }
-                socket.send(JSON.stringify(data));
-                form[0].reset()
-            })
-        };
-
-
-    </script>
 {% endblock javascript %}

@@ -20,22 +20,19 @@
                 <p class="article-content" >{{ post.content }}</p>
                 <img class src="{{ post.image.url }}">
             </div>
+
             <div class="icons">
                 <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
                     <span >Likes</span>
-                    <p> {{ post.likes.count }}</p>
                 </button>
+                <a href="{% url 'feed-detail' post.id %}">
                 <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
                     <span>Comments</span>
-                    <p> 0 {{ post.comments.count }}</p>
                 </button>
+                </a>
             </div>
         </article>
     {% endfor %}
 
     <!-- Create a post section -->
 {% endblock content %}
-
-{% block javascript %}
-
-{% endblock javascript %}

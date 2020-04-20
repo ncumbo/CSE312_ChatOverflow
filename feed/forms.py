@@ -1,10 +1,15 @@
 from django import forms
-from .models import Post
+from .models import Post, Comment
 
-class Upload():
+# class Upload(forms.ModelForm):
+#
+#     image = forms.FileField(required=False)
+#
+#     class Meta:
+#         model = Post
+#         fields = ('content', 'image')
 
-    image = forms.FileField(required=False)
-
+class CommentForm(forms.ModelForm):
     class Meta:
-        model = Post
-        fields = ('content', 'image')
+        model = Comment
+        fields = ('content',)
