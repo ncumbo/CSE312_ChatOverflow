@@ -43,6 +43,11 @@ h1, p, small{
     margin: 10px;
 }
 
+.image-ori{
+    max-width: 400px;
+    max-height: 240px;
+}
+
 .container{
     color: grey;
 }

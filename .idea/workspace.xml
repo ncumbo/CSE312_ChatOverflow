@@ -20,17 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/feed/migrations/0007_comment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_photos/drinking.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/migrations/0008_remove_post_comments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meme_photos/default_image_AIxAqmW.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meme_photos/fun_DFnPYGx.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meme_photos/fun_leTvp46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meme_photos/josh.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meme_photos/josh_ClNDyfB.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meme_photos/jump.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meme_photos/jump_2Qw2Uvg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/profile_photos/drinking_1lIbXOS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/profile_photos/sky.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/static/feed/css/stylized.css" beforeDir="false" afterPath="$PROJECT_DIR$/feed/static/feed/css/stylized.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/templates/feed/feed.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/feed.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/post_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +73,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JupyterPython" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../CSE 474" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -129,7 +134,9 @@
       <workItem from="1587152560079" duration="6565000" />
       <workItem from="1587225474519" duration="21445000" />
       <workItem from="1587327723110" duration="10975000" />
-      <workItem from="1587342811421" duration="10336000" />
+      <workItem from="1587342811421" duration="12064000" />
+      <workItem from="1587418017216" duration="91000" />
+      <workItem from="1588450305825" duration="693000" />
     </task>
     <servers />
   </component>
@@ -171,10 +178,11 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="263" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1587325734984" />
-    <state x="413" y="296" width="374" height="513" key="FileChooserDialogImpl" timestamp="1587188645960">
+    <state x="413" y="296" width="374" height="513" key="FileChooserDialogImpl" timestamp="1587418117703">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="413" y="296" width="374" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1587188645960" />
+    <state x="413" y="296" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1587418117703" />
     <state x="771" y="296" width="424" height="513" key="FileChooserDialogImpl/67.27.3773.1053@67.27.3773.1053" timestamp="1587079753983" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1587313954586">
       <screen x="67" y="27" width="1853" height="1053" />
@@ -184,11 +192,11 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="67" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1587055210507" />
-    <state x="356" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1587327687330">
+    <state x="356" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1588450843534">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="356" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1587154267006" />
-    <state x="356" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1587327687330" />
+    <state x="356" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1588450843534" />
     <state x="656" y="257" key="search.everywhere.popup/67.27.3773.1053@67.27.3773.1053" timestamp="1587063467197" />
     <state x="2335" y="455" width="540" height="194" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1587062109034">
       <screen x="67" y="27" width="3773" height="1053" />
