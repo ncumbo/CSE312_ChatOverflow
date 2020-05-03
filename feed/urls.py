@@ -4,7 +4,6 @@ from .views import PostListView, PostDetailView, PostCreateView, PostDeleteView,
 from . import views
 from .models import Comment
 
-from chat.views import messages
 
 urlpatterns = [
     path('', PostListView.as_view(), name='feed-home'),
@@ -17,7 +16,7 @@ urlpatterns = [
     #path('comment/<int:id>/', CommentListView.as_view(), name='feed-post-comment'),   #works
 
     path('friends/', views.friends, name='feed-friends'),
-    path('messages/', messages, name='messages'),
+    path('messages/', views.messages, name='feed-messages'),
 ]
 
 #<app>/<model>_<viewtype>.html naming convention

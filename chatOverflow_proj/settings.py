@@ -64,7 +64,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'chatOverflow_proj.wsgi.application'
 ASGI_APPLICATION = "chatOverflow_proj.routing.application"
-
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -121,8 +128,6 @@ USE_TZ = True
 
 #choose css frameworks to use
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-ASGI_APPLICATION = 'feed.routing.application'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

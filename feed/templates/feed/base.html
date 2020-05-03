@@ -23,7 +23,7 @@
             {% if user.is_authenticated %}
                 <a class="nav-item nav-link" href="{% url 'profile' %}">My Profile</a>
                 <a class="nav-item nav-link" href="{% url 'feed-friends' %}">Friends</a>
-                <a class="nav-item nav-link" href="{% url 'messages' %}">Messages</a>
+                <a class="nav-item nav-link" href="{% url 'chat:index' %}">Messages</a>
             {% endif %}
 
         </div>
