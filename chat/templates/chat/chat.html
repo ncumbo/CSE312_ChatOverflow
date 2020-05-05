@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    </head>
+<body>
+<div class="messaging">
+
+      <div class="inbox_msg">
+          <!--Inbox messages & people-->
+        <div class="inbox_people">
+          <div class="headind_srch">
+              <!--recent heading title-->
+            <div class="recent_heading">
+              <h4>Recent</h4>
+            </div>
+          </div>
+
+          <div class="inbox_chat">
+            <div class="chat_list active_chat">
+              <div class="chat_people">
+                <div class="chat_ib">
+                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                  <p>Test, which is a new approach to have all solutions
+                    astrology under one roof.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!--messages, right side-->
+        <div class="mesgs">
+          <div class="msg_history">
+            <div class="incoming_msg">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>Test which is a new approach to have all
+                    solutions</p>
+                  <span class="time_date"> 11:01 AM    |    June 9</span></div>
+              </div>
+            </div>
+            <div class="outgoing_msg">
+              <div class="sent_msg">
+                <p>Test which is a new approach to have all
+                  solutions</p>
+                <span class="time_date"> 11:01 AM    |    June 9</span> </div>
+            </div>
+            <div class="incoming_msg">
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p>Test, which is a new approach to have</p>
+                  <span class="time_date"> 11:01 AM    |    Yesterday</span></div>
+              </div>
+            </div>
+          </div>
+
+            <!-- input type -->
+            <div class="type_msg input_msg_write">
+              <input id="chat-message-input" type="text" class="write_msg" placeholder="Type a message" />
+              <input class="btn" id="chat-message-submit" type="button" value="Send">
+                <!--<button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+<script >$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+
+$("#profile-img").click(function() {
+	$("#status-options").toggleClass("active");
+});
+
+$(".expand-button").click(function() {
+  $("#profile").toggleClass("expanded");
+	$("#contacts").toggleClass("expanded");
+});
+
+$("#status-options ul li").click(function() {
+	$("#profile-img").removeClass();
+	$("#status-online").removeClass("active");
+	$("#status-away").removeClass("active");
+	$("#status-busy").removeClass("active");
+	$("#status-offline").removeClass("active");
+	$(this).addClass("active");
+
+	if($("#status-online").hasClass("active")) {
+		$("#profile-img").addClass("online");
+	} else if ($("#status-away").hasClass("active")) {
+		$("#profile-img").addClass("away");
+	} else if ($("#status-busy").hasClass("active")) {
+		$("#profile-img").addClass("busy");
+	} else if ($("#status-offline").hasClass("active")) {
+		$("#profile-img").addClass("offline");
+	} else {
+		$("#profile-img").removeClass();
+	};
+
+	$("#status-options").removeClass("active");
+});
+
+function newMessage() {
+	message = $(".message-input input").val();
+	if($.trim(message) == '') {
+		return false;
+	}
+	$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+	$('.message-input input').val(null);
+	$('.contact.active .preview').html('<span>You: </span>' + message);
+	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+};
+
+$('.submit').click(function() {
+  newMessage();
+});
+
+$(window).on('keydown', function(e) {
+  if (e.which == 13) {
+    newMessage();
+    return false;
+  }
+});
+//# sourceURL=pen.js
+</script>
+</body></html>
+
+{% extends "feed/base.html" %}
+{% load static %}
+{% block content %}
+    <textarea id="chat-log" cols="50" rows="20"></textarea><br>
+    <input id="chat-message-input" type="text" size="50"><br>
+    <input id="chat-message-submit" type="button" value="Send">
+
+{% endblock content %}
+
+{% block javascript %}
+    <script src="{% static 'chat/js/reconnecting-websocket.js' %}"></script>
+    <script>
+        //const roomName = JSON.parse(document.getElementById('room-name').textContent);
+        var roomName = {{ room_name_json }}
+
+        const chatSocket = new ReconnectingWebSocket(
+            'ws://' + window.location.host + '/ws/chat/'
+            + roomName + '/')
+
+        chatSocket.onmessage = function(e) {
+            var data = JSON.parse(e.data);
+            document.querySelector('#chat-log').value += (data.message + '\n');
+        };
+
+        chatSocket.onclose = function(e) {
+            console.error('Chat socket closed unexpectedly');
+        };
+
+        document.querySelector('#chat-message-input').focus();
+        document.querySelector('#chat-message-input').onkeyup = function(e) {
+            if (e.keyCode === 13) {  // enter, return
+                document.querySelector('#chat-message-submit').click();
+            }
+        };
+
+        document.querySelector('#chat-message-submit').onclick = function(e) {
+            var messageInputDom = document.querySelector('#chat-message-input');
+            var message = messageInputDom.value;
+            chatSocket.send(JSON.stringify({
+                'message': message,
+                'command': 'fetch-messages',
+            }));
+            messageInputDom.value = '';
+        };
+    </script>
+{% endblock javascript %}

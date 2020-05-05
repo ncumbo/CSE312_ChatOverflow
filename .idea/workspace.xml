@@ -20,90 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/templates/chat/room.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis-1.3.1.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis-1.3.1.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis-1.3.1.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis-1.3.1.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis-1.3.1.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis-1.3.1.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/abc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/cluster.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/generic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/geo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/hash.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/hyperloglog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/list.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/pubsub.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/scripting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/set.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/sorted_set.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/streams.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/string.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/commands/transaction.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/errors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/locks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/log.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/pool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/pubsub.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/sentinel/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/sentinel/commands.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/sentinel/pool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/stream.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/aioredis/util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/async_timeout-3.0.1.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/async_timeout-3.0.1.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/async_timeout-3.0.1.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/async_timeout-3.0.1.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/async_timeout-3.0.1.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/async_timeout-3.0.1.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/async_timeout/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/async_timeout/py.typed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/channels_redis-2.4.2.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/channels_redis-2.4.2.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/channels_redis-2.4.2.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/channels_redis-2.4.2.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/channels_redis-2.4.2.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/channels_redis-2.4.2.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/channels_redis/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/channels_redis/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/hiredis-1.0.1.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/hiredis-1.0.1.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/hiredis-1.0.1.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/hiredis-1.0.1.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/hiredis-1.0.1.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/hiredis/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/hiredis/hiredis.cpython-36m-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/hiredis/version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/msgpack-0.6.2.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/msgpack-0.6.2.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/msgpack-0.6.2.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/msgpack-0.6.2.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/msgpack-0.6.2.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/msgpack/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/msgpack/_cmsgpack.cpython-36m-x86_64-linux-gnu.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/msgpack/_version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/msgpack/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/msgpack/fallback.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/static/chat/css/chat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/static/chat/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/static/chat/js/reconnecting-websocket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/templates/chat/chat.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/routing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatOverflow_proj/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatOverflow_proj/routing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatOverflow_proj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatOverflow_proj/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatOverflow_proj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatOverflow_proj/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/routing.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/templates/feed/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,20 +72,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JupyterPython" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../CSE 474" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/chat/static/chat/js" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chat/static/chat/js" />
+      <recent name="$PROJECT_DIR$/media/profile_photos" />
+      <recent name="$PROJECT_DIR$/feed" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/media" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project\CSE312_ChatOverflow\feed\static\feed" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project\CSE312_ChatOverflow\feed\static" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project\CSE312_ChatOverflow\chatOverflow_proj" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project Phase 1\CSE312_ChatOverflow\feed\static\feed" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/media/profile_photos" />
-      <recent name="$PROJECT_DIR$/feed" />
     </key>
   </component>
   <component name="RunManager">
@@ -166,6 +96,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="chatOverflow_proj.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -207,7 +138,10 @@
       <workItem from="1587418017216" duration="91000" />
       <workItem from="1588450305825" duration="693000" />
       <workItem from="1588517704725" duration="574000" />
-      <workItem from="1588518305765" duration="15306000" />
+      <workItem from="1588518305765" duration="23916000" />
+      <workItem from="1588551139049" duration="7054000" />
+      <workItem from="1588604571117" duration="9737000" />
+      <workItem from="1588690708594" duration="7000" />
     </task>
     <servers />
   </component>
@@ -255,6 +189,22 @@
     <state x="413" y="296" width="374" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1587188645960" />
     <state x="413" y="296" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1587418117703" />
     <state x="771" y="296" width="424" height="513" key="FileChooserDialogImpl/67.27.3773.1053@67.27.3773.1053" timestamp="1587079753983" />
+    <state width="881" height="278" key="GridCell.Tab.0.bottom" timestamp="1588607762881">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="881" height="278" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1588607762881" />
+    <state width="881" height="278" key="GridCell.Tab.0.center" timestamp="1588607762879">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="881" height="278" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1588607762879" />
+    <state width="881" height="278" key="GridCell.Tab.0.left" timestamp="1588607762878">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="881" height="278" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1588607762878" />
+    <state width="881" height="278" key="GridCell.Tab.0.right" timestamp="1588607762880">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="881" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1588607762880" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1587313954586">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

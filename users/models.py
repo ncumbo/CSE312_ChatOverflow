@@ -3,8 +3,6 @@ from django.contrib.auth.models import User
 from django import forms
 
 
-# Create your models here.
-
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     user_bio = models.CharField(max_length=300, default="Change current Bio")
