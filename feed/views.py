@@ -4,7 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import FormMixin
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, RedirectView, TemplateView
 from django_xhtml2pdf.views import PdfMixin
-from .models import Post, Comment
+from .models import Post, Comment, Friend
 from .forms import CommentForm
 
 #P3
@@ -26,7 +26,6 @@ class PostListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(PostListView, self).get_context_data()
         context['users'] = User.objects.all()
-        print(context['users'])
         return context
 
 
@@ -74,16 +73,56 @@ class PostLike(RedirectView):
         return 1
 
 def friends(request):
-    return render(request, 'feed/friends.html', {'users': User.objects.all()})
+    try:
+        friend = Friend.objects.get(currentUser=request.user)
+        excludeList = []
+        excludeList.append(request.user.id)
+        for each in friend.users.all():
+            excludeList.append(each.id)
+
+        context = {
+            'users': User.objects.exclude(id__in=excludeList),
+            'friends': friend.users.all(),
+        }
+    except Friend.DoesNotExist:
+        excludeList = []
+        excludeList.append(request.user.id)
+        context = {
+            'users': User.objects.exclude(id__in=excludeList),
+            'friends': None,
+        }
+
+    return render(request, 'feed/friends.html', context)
+
+def updateFriendsList(request, operation, pk):
+    newFriend = User.objects.get(pk=pk)
+    if operation == 'add':
+        Friend.make_friend(request.user, newFriend)
+    elif operation == 'remove':
+        Friend.unfriend(request.user, newFriend)
+
+    friend = Friend.objects.get(currentUser=request.user)
+    excludeList = []
+    excludeList.append(request.user.id)
+    for each in friend.users.all():
+        excludeList.append(each.id)
+
+
+    context = {
+        'users': User.objects.exclude(id__in=excludeList),
+        'friends': friend.users.all(),
+    }
+    return render(request, 'feed/friends.html', context)
 
 def view_profile(request, pk=None):
     if pk:
         user = User.objects.get(pk=pk)
     else:
         user = request.user
-        print(user)
     context = {'user': user}
     return render(request, 'users/profile.html', context)
+
+
 
 def messages(request):
     return render(request, 'feed/messages.html', {'username': 'ncumbo'})

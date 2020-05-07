@@ -19,6 +19,9 @@ urlpatterns = [
     path('profile/<int:pk>/', views.view_profile, name='view-profile'),
     path('friends/', views.friends, name='feed-friends'),
 
+    #friend/unfriend
+    path('follow/<str:operation>/<int:pk>', views.updateFriendsList, name='update-friends'),
+
 
     path('messages/', views.messages, name='feed-messages'),
 ]

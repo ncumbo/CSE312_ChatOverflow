@@ -3,12 +3,23 @@
 
 {% block content %}
     <div class="modal-title">
-        <h1>Add a Friend</h1>
-        <div class="friends">
+        <div class="current-friends">
+            <h1>Current Friends</h1>
+            {% for friend in friends %}
+                <div class="users" >
+                    <a href="{% url 'view-profile' friend.pk %}"><h5>{{ friend.username }}</h5></a>
+                    <a href="{% url 'update-friends' 'remove' friend.pk %}"><button type="button" class="btn btn-sm mt-1 mb-1"><span >Unfollow</span></button></a>
+                </div>
+            {% endfor %}
+            <hr/>
+        </div>
+
+        <h1>Add New Friend</h1>
+        <div class="new-friends">
             {% for user in users %}
                 <div class="users" >
                     <a href="{% url 'view-profile' user.pk %}"><h5>{{ user.username }}</h5></a>
-                    <button type="button" class="btn btn-sm mt-1 mb-1"><span >Follow</span></button>
+                    <a href="{% url 'update-friends' 'add' user.pk %}"><button type="button" class="btn btn-sm mt-1 mb-1"><span >Follow</span></button></a>
                 </div>
             {% endfor %}
         </div>
