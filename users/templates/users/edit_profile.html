@@ -1,0 +1,57 @@
+{% extends "feed/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %} <!-- loads in css file from static directory -->
+
+{% block stylesheet %}
+   <link rel="stylesheet" type="text/css" href="{% static 'users/css/profile.css' %}">
+{% endblock stylesheet %}
+
+
+{% block content %}
+	<div class='media content-section'>
+	<img class='rounded-circle account-img' src=" {{user.profile.image.url}} ">
+		<div class='media-block'>
+	<h1 class='user-heading'> {{user.username}} </h1>
+	<p class='text-secondary'> {{user.profile.user_bio}} </p>
+		</div>
+	</div>
+
+	<div id="form" class="hidden">
+
+		<form id="dropdown" method="POST" enctype="multipart/form-data">
+		    {% csrf_token %}
+	    <fieldset class="form-group">
+			        <legend class="border-bottom mb-4">Profile Info</legend>
+				    {{ user_update|crispy }}
+				    {{ profile_update|crispy }}
+		    </fieldset>
+		    <div class="form-group">
+		        <button class="btn btn-default" type="submit">Update Profile</button>
+		    </div>
+		</form>
+
+	</div>
+
+	<button id="toggle" onclick="dropDown()"> Edit Account </button>
+
+
+	{% block javascript %}
+
+	<script>
+
+			function dropDown() {
+				let menu = document.getElementById("form");
+				// menu.classList.remove("hidden");
+				if(menu.style.display === "block") {
+					menu.style.display = "none";
+				} else {
+					menu.style.display = "block";
+				}
+			}
+
+	</script>
+
+	{% endblock javascript %}
+
+
+{% endblock content %}

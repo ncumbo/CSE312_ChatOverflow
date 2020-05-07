@@ -1,14 +1,14 @@
-from django.http import HttpResponseRedirect, HttpResponseForbidden
+#P2
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.urls import reverse
 from django.views.generic.edit import FormMixin
-from django.views.generic import ListView, DetailView, CreateView, DeleteView, RedirectView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, RedirectView, TemplateView
 from django_xhtml2pdf.views import PdfMixin
-from .models import Post, Comment
-
-from django import forms
+from .models import Post, Comment, Friend
 from .forms import CommentForm
+
+#P3
+from django.contrib.auth.models import User
 
 def home(request):
     context = {
@@ -18,10 +18,16 @@ def home(request):
 
 #Works
 class PostListView(ListView):
-    model = Post     #tells listviewto query a post
+    model = Post
     template_name = 'feed/feed.html'    #template w naming convention <app>/<model>_<viewtype>.html naming convention
     context_object_name = 'posts'
     ordering = ['-date_posted'] #chronological ordering
+
+    def get_context_data(self, **kwargs):
+        context = super(PostListView, self).get_context_data()
+        context['users'] = User.objects.all()
+        return context
+
 
 class PostDetailView(FormMixin, DetailView):
     model = Post
@@ -35,8 +41,6 @@ class PostDetailView(FormMixin, DetailView):
 
         context['comments'] = Comment.objects.filter(post_id=self.kwargs.get('pk'))
         return context
-
-
 
 class PostDownloadPDF(PdfMixin, DetailView):
     model = Post
@@ -69,7 +73,56 @@ class PostLike(RedirectView):
         return 1
 
 def friends(request):
-    return render(request, 'feed/friends.html')
+    try:
+        friend = Friend.objects.get(currentUser=request.user)
+        excludeList = []
+        excludeList.append(request.user.id)
+        for each in friend.users.all():
+            excludeList.append(each.id)
+
+        context = {
+            'users': User.objects.exclude(id__in=excludeList),
+            'friends': friend.users.all(),
+        }
+    except Friend.DoesNotExist:
+        excludeList = []
+        excludeList.append(request.user.id)
+        context = {
+            'users': User.objects.exclude(id__in=excludeList),
+            'friends': None,
+        }
+
+    return render(request, 'feed/friends.html', context)
+
+def updateFriendsList(request, operation, pk):
+    newFriend = User.objects.get(pk=pk)
+    if operation == 'add':
+        Friend.make_friend(request.user, newFriend)
+    elif operation == 'remove':
+        Friend.unfriend(request.user, newFriend)
+
+    friend = Friend.objects.get(currentUser=request.user)
+    excludeList = []
+    excludeList.append(request.user.id)
+    for each in friend.users.all():
+        excludeList.append(each.id)
+
+
+    context = {
+        'users': User.objects.exclude(id__in=excludeList),
+        'friends': friend.users.all(),
+    }
+    return render(request, 'feed/friends.html', context)
+
+def view_profile(request, pk=None):
+    if pk:
+        user = User.objects.get(pk=pk)
+    else:
+        user = request.user
+    context = {'user': user}
+    return render(request, 'users/view_profiles.html', context)
+
+
 
 def messages(request):
     return render(request, 'feed/messages.html', {'username': 'ncumbo'})

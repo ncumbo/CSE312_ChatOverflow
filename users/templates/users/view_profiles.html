@@ -1,0 +1,18 @@
+{% extends "feed/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %} <!-- loads in css file from static directory -->
+
+{% block stylesheet %}
+   <link rel="stylesheet" type="text/css" href="{% static 'users/css/profile.css' %}">
+{% endblock stylesheet %}
+
+
+{% block content %}
+	<div class='media content-section'>
+        <img class='rounded-circle account-img' src=" {{user.profile.image.url}} ">
+		<div class='media-block'>
+            <h1 class='user-heading'> {{user.username}} </h1>
+            <p class=""> {{user.profile.user_bio}} </p>
+		</div>
+	</div>
+{% endblock content %}

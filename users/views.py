@@ -11,8 +11,8 @@ def registerView(request):
 		form = UserRegisterForm(request.POST)
 		if form.is_valid():
 			form.save()
-			username = form.clean_data.get('username') #protects against sql injection
-			messages.success(request, 'Account created for {username}')
+			username = form.cleaned_data.get('username') #protects against sql injection
+			messages.success(request, 'Account created for {{ username }}')
 			return redirect('feed-home')
 	else:
 		form = UserRegisterForm()
@@ -39,4 +39,4 @@ def profile(request):
 		'user_update': user_update,
 		'profile_update': profile_update
 	}
-	return render(request,'users/profile.html',keyVals)
+	return render(request, 'users/edit_profile.html', keyVals)

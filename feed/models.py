@@ -30,3 +30,16 @@ class Comment(models.Model):
     def __str__(self):
         return '{} commented on {}'.format(str(self.user.username), str(self.post.username))
 
+class Friend(models.Model):
+    users = models.ManyToManyField(User)
+    currentUser = models.ForeignKey(User, related_name='current_user', null=True, on_delete=models.CASCADE)
+
+    @classmethod
+    def make_friend(cls, currentUser, newFriend):
+        friend, created = cls.objects.get_or_create(currentUser=currentUser)
+        friend.users.add(newFriend)
+
+    @classmethod
+    def unfriend(cls, currentUser, newFriend):
+        friend, created = cls.objects.get_or_create(currentUser=currentUser)
+        friend.users.remove(newFriend)
