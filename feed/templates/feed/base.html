@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse navbar-nav mr-auto" id="navMenu">
             {% if user.is_authenticated %}
                 <a class="nav-item nav-link" href="{% url 'profile' %}">My Profile</a>
-                <a class="nav-item nav-link" href="{% url 'feed-friends' %}">Friends</a>
+                <a class="nav-item nav-link" href="{% url 'feed-friends' %}">Add Friends</a>
                 <a class="nav-item nav-link" href="{% url 'chat:index' %}">Messages</a>
             {% endif %}
 

@@ -15,16 +15,36 @@
 		</div>
 	</div>
 
-	<form method="POST" enctype="multipart/form-data">
-	    {% csrf_token %}
-        <fieldset class="form-group">
-		        <legend class="border-bottom mb-4">Profile Info</legend>
-			    {{ user_update|crispy }}
-			    {{ profile_update|crispy }}
-	    </fieldset>
-	    <div class="form-group">
-	        <button class="btn btn-default" type="submit">Update Profile</button>
-	    </div>
-	</form>
+    <div id="form" class="hidden">
+        <form id="dropdown" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Profile Info</legend>
+                {{ user_update|crispy }}
+                {{ profile_update|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Update Profile</button>
+            </div>
+        </form>
+    </div>
+
+    <button id="toggle" onclick="dropDown()"> Edit Account </button>
+
 
 {% endblock content %}
+
+
+{% block javascript %}
+<script>
+    function dropDown() {
+        let menu = document.getElementById("form");
+        menu.classList.remove("hidden");
+        if(menu.style.display === "none") {
+            menu.style.display = "block";
+        } else {
+            menu.style.display = "none";
+        }
+    }
+</script>
+{% endblock javascript %}
