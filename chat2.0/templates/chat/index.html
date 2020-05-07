@@ -1,20 +1,8 @@
 {% extends "feed/base.html" %}
 {% block content %}
-    <div class="modal-title">
-        <div class="current-friends">
-            <h1>DM Friends</h1>
-            {% for friend in friends %}
-                <div class="users">
-                    <h5>{{ friend.username }}</h5>
-                </div>
-            {% endfor %}
-            <hr/>
-        </div>
-    </div>
-
-    <!--What chat room would you like to enter?<br>
+    What chat room would you like to enter?<br>
     <input id="room-name-input" type="text" size="50"><br>
-    <input id="room-name-submit" type="button" value="Enter">-->
+    <input id="room-name-submit" type="button" value="Enter">
 {% endblock content %}
 
 
@@ -31,7 +19,5 @@
             var roomName = document.querySelector('#room-name-input').value;
             window.location.pathname = '/chat/' + roomName + '/';
         };
-
-
     </script>
 {% endblock javascript %}

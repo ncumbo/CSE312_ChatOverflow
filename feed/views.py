@@ -120,7 +120,7 @@ def view_profile(request, pk=None):
     else:
         user = request.user
     context = {'user': user}
-    return render(request, 'users/profile.html', context)
+    return render(request, 'users/view_profiles.html', context)
 
 
 

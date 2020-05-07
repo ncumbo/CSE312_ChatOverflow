@@ -16,9 +16,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
 
     #chatrooms
-    path('messages/', index, name='index'),
-    path('chat/', include('chat.urls', namespace='chat')),
-    #path('chat/', include('chat.urls')),
+    path('chat/', include('chat.urls')),
 ]
 
 if settings.DEBUG:

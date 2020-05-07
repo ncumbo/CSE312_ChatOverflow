@@ -39,4 +39,4 @@ def profile(request):
 		'user_update': user_update,
 		'profile_update': profile_update
 	}
-	return render(request,'users/profile.html',keyVals)
+	return render(request, 'users/edit_profile.html', keyVals)

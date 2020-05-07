@@ -23,15 +23,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/feed/migrations/0009_friend.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feed/migrations/0010_friend_currentuser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/consumers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/routing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/static/chat/css/chat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/static/chat/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/static/chat/js/reconnecting-websocket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/templates/chat/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/templates/chat/room.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat2.0/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meme_photos/jump_Wu4ms6F.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/edit_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/view_profiles.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/friends.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/friends.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatOverflow_proj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatOverflow_proj/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/static/users/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/users/static/users/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,17 +96,18 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/chat/static/chat/js" />
+      <recent name="$PROJECT_DIR$/media/profile_photos" />
+      <recent name="$PROJECT_DIR$/feed" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/chat-frontend/src" />
       <recent name="$PROJECT_DIR$/media" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project\CSE312_ChatOverflow\feed\static\feed" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project\CSE312_ChatOverflow\feed\static" />
       <recent name="C:\Users\nickc\Documents\CSE 312\Project\Project\CSE312_ChatOverflow\chatOverflow_proj" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/chat/static/chat/js" />
-      <recent name="$PROJECT_DIR$/media/profile_photos" />
-      <recent name="$PROJECT_DIR$/feed" />
     </key>
   </component>
   <component name="RunManager">
@@ -145,7 +165,7 @@
       <workItem from="1588690708594" duration="7000" />
       <workItem from="1588702858704" duration="2534000" />
       <workItem from="1588713134893" duration="29825000" />
-      <workItem from="1588864409182" duration="8233000" />
+      <workItem from="1588864409182" duration="15433000" />
     </task>
     <servers />
   </component>
@@ -195,11 +215,11 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="227" y="405" width="518" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1588786767566" />
-    <state x="413" y="296" width="374" height="513" key="FileChooserDialogImpl" timestamp="1587418117703">
+    <state x="413" y="296" width="424" height="484" key="FileChooserDialogImpl" timestamp="1588874705908">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="413" y="296" width="374" height="513" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1587188645960" />
-    <state x="413" y="296" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1587418117703" />
+    <state x="413" y="296" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1588874705908" />
     <state x="771" y="296" width="424" height="513" key="FileChooserDialogImpl/67.27.3773.1053@67.27.3773.1053" timestamp="1587079753983" />
     <state width="881" height="278" key="GridCell.Tab.0.bottom" timestamp="1588778681294">
       <screen x="67" y="27" width="1853" height="1053" />

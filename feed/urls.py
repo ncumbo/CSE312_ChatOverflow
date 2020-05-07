@@ -15,15 +15,12 @@ urlpatterns = [
     path('feed/<int:pk>/like/', PostLike.as_view(), name='feed-like'),
     #path('comment/<int:id>/', CommentListView.as_view(), name='feed-post-comment'),   #works
 
-    path('profile/', views.view_profile, name='view-your-profile'),
     path('profile/<int:pk>/', views.view_profile, name='view-profile'),
     path('friends/', views.friends, name='feed-friends'),
 
     #friend/unfriend
     path('follow/<str:operation>/<int:pk>', views.updateFriendsList, name='update-friends'),
 
-
-    path('messages/', views.messages, name='feed-messages'),
 ]
 
 #<app>/<model>_<viewtype>.html naming convention
