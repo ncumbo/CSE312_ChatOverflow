@@ -2,10 +2,11 @@ import json
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer, AsyncWebsocketConsumer
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 
 from .models import Message
 
-User = get_user_model()
+#User = get_user_model()
 
 class ChatConsumer(WebsocketConsumer):
     #asynchronous provide higher level of performance bc it doesnt create additional

@@ -23,34 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chat2.0/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/consumers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/routing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/static/chat/css/chat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/static/chat/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/static/chat/js/reconnecting-websocket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/templates/chat/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/templates/chat/room.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat2.0/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/meme_photos/jump_Wu4ms6F.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/templates/users/edit_profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/templates/users/view_profiles.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/chat/css/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/chat/static/chat/css/chat.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatOverflow_proj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatOverflow_proj/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/static/users/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/users/static/users/css/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +144,7 @@
       <workItem from="1588690708594" duration="7000" />
       <workItem from="1588702858704" duration="2534000" />
       <workItem from="1588713134893" duration="29825000" />
-      <workItem from="1588864409182" duration="15433000" />
+      <workItem from="1588864409182" duration="28726000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,9 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
-User = get_user_model()
+#User = get_user_model()
 
 class Message(models.Model):
     author = models.ForeignKey(User, related_name='author_messages', on_delete=models.CASCADE)
