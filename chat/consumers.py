@@ -2,17 +2,13 @@ import json
 from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer, AsyncWebsocketConsumer
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
+from channels.layers import get_channel_layer
 
 from .models import Message
 
-User = get_user_model()
-
 class ChatConsumer(WebsocketConsumer):
-    #asynchronous provide higher level of performance bc it doesnt create additional
-    #threads when handling requests
-    #async used to call asynchronous functions that perform i/o
-
-    #old messages
+    # get old messages
     def fetch_messages(self, data):
         print('fetch')
         messages = Message.last_20_messages()
@@ -22,11 +18,15 @@ class ChatConsumer(WebsocketConsumer):
         }
         self.send_message(content)
 
-    #creat new message
+    def send_message(self, message):    # Parse in content then straight away send message
+        self.send(text_data=json.dumps(message))
+
+    # create new messages
     def new_message(self, data):
         print('new message')
         author = data['from']   #from User loggedin
         author_user = User.objects.filter(username=author)[0]
+        #author to
         message = Message.objects.create(
             author=author_user,
             content=data['message']
@@ -37,6 +37,23 @@ class ChatConsumer(WebsocketConsumer):
         }
         return self.send_chat_message(content)
 
+    def send_chat_message(self, message):
+        # Send message to room group
+        channel_layer = get_channel_layer()     #new
+        #async_to_sync(self.channel_layer.group_send)( #old
+        async_to_sync(channel_layer.group_send)(   #new
+            self.room_group_name,
+            {
+                'type': 'chat_message',
+                'message': message
+            }
+        )
+
+    def chat_message(self, event):  # Receive message from event then sending it
+        message = event['message']
+        self.send(text_data=json.dumps(message))    # Send message to WebSocket
+
+    #parse message to json
     def messages_to_json(self, messages):
         result = []
         for mess in messages:
@@ -78,27 +95,6 @@ class ChatConsumer(WebsocketConsumer):
     # Receive message from WebSocket
     def receive(self, text_data):
         data = json.loads(text_data)
-        # data['command'] will either return fetch_message or new_message
-        # and then run either of the commands
-        # calls corresponding function in the dictionary
         self.commands[data['command']](self, data)
 
 
-    def send_chat_message(self, message):
-        # Send message to room group
-        async_to_sync(self.channel_layer.group_send)(
-            self.room_group_name,
-            {
-                'type': 'chat_message',
-                'message': message
-            }
-        )
-
-    # Parse in content then straight away send message
-    def send_message(self, message):
-        self.send(text_data=json.dumps(message))
-
-    # Receive message from event then sending it
-    def chat_message(self, event):
-        message = event['message']
-        self.send(text_data=json.dumps(message))    # Send message to WebSocket
