@@ -23,9 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Django Channels Report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReconnectingWebSocket Report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Redis Report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django Report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Django Report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/messaging.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +147,7 @@
       <workItem from="1588713134893" duration="29825000" />
       <workItem from="1588864409182" duration="28726000" />
       <workItem from="1588948989404" duration="9826000" />
-      <workItem from="1588985763631" duration="3526000" />
+      <workItem from="1588985763631" duration="9264000" />
     </task>
     <servers />
   </component>

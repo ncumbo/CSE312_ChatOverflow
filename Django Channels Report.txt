@@ -1,0 +1,27 @@
+Django Channels report:
+
+What does this technology do for us.
+
+This is an open source framework used with Redis that handles
+asynchronous/synchronous WebSocket connections. It supports the
+instant messaging application in this project by allowing the
+messages to be sent through a channel that connects, disconnects,
+retrieves, and sends messages through a WebSocket.
+
+How does this technology accomplish what it does.
+
+Django Channels works to support instant messaging through WebSockets
+by Routing and Consumers. In order to do this, our WSGI application
+must be turned into a ASGI (Asynchronous) application to run the channels
+themselves. The consumers.py file contains functions that handle connecting,
+disconnecting, recieving messages, and sending messages all through WebSockets.
+The routing.py files act like urls.py but serve WebSocket url paths that
+are connected to a the instant messaging consumer
+
+https://channels.readthedocs.io/en/latest/index.html
+https://github.com/django/channels
+
+What licenses or terms of service apply.
+
+The trademark and license
+https://github.com/django/channels/blob/master/LICENSE
