@@ -1,0 +1,27 @@
+Redis report:
+
+What does this technology do for us.
+
+This is an open source framework used with django channels and JavaScript
+that decorates a regular WebSocket connection into one that will automatically
+reconnect if the connection is dropped. We use this in out project to keep an
+ongoing connection in instant messages.
+
+How does this technology accomplish what it does.
+
+This application is easy accomplished as all we'll need to do to accomplish a
+reconnecting WebSocket is by replacing 'var ws = new WebSocket' to
+'var ws = new ReconnectingWebSocket' in the javascript to the messaging.html
+template. After doing this, we will add a script tag with the src going to the
+reconnecting-websocket.js file.
+
+The reconnecting-websocket.js file basically works like a WebSocket until it fails
+to connect or gets disconnected, then it will repearedly poll until it successfully
+connects again.
+
+https://github.com/joewalnes/reconnecting-websocket
+
+What licenses or terms of service apply.
+
+The trademark and license
+https://github.com/joewalnes/reconnecting-websocket/blob/master/LICENSE.txt (MIT License)

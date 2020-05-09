@@ -1,0 +1,23 @@
+Redis report:
+
+What does this technology do for us.
+
+This is an open source framework used with django channels that is a
+memory data backing store for messages. It supports the instant messaging
+application in this project by allowing the messages to go this Redis layer.
+
+How does this technology accomplish what it does.
+
+Redis accomplishes being a memory back store for messages as you institute
+it your settings.py part of the project. From there you institute the Redis
+layer in the CHANNEL_LAYERS which allows you to talk between different instances
+of an application. The layer then uses Redis as its backing store and supports
+both a single-server and sharded configurations
+
+https://redis.io/
+
+
+What licenses or terms of service apply.
+
+The trademark and license
+https://redislabs.com/legal/licenses/

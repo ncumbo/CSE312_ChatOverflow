@@ -2,7 +2,7 @@ Django report:
 
 What does this technology do for us.
 
-This is a open source framework used with python for web applications.
+This is an open source framework used with python for web applications.
 Django makes backend development much easier by processing HTTP requests
 for us. It takes the requests and makes the respnonses based off of
 templates we have setup. It handles backend TCP server action
@@ -31,7 +31,7 @@ the content you placed in settings.py. Creating the models will be the database 
 Database: https://docs.djangoproject.com/en/3.0/intro/tutorial02/
 
 Django also uses websockets through django channels to update pages without a refresh.
-
+https://channels.readthedocs.io/en/1.x/index.html
 
 What licenses or terms of service apply.
 
