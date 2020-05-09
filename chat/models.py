@@ -10,6 +10,8 @@ class Message(models.Model):
     content = models.TextField()
     timestamp = models.DateTimeField(default=timezone.now)  #auto_now_add=True
 
+    #userMessaged = models.ForeignKey(User, related_name='user_to_messages', on_delete=models.CASCADE)
+
     def __str__(self):
         return self.author.username
 
