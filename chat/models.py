@@ -11,11 +11,12 @@ class Message(models.Model):
     content = models.TextField()
     timestamp = models.DateTimeField(default=timezone.now)  #auto_now_add=True
 
-    #read = models.BooleanField
-    #userMessaged = models.ForeignKey(User, related_name='user_to_messages', on_delete=models.CASCADE)
+    seen = models.BooleanField(default=True)
+    #recipient = models.ForeignKey(User, related_name='recipient', on_delete=models.CASCADE, default='')
 
     def __str__(self):
         return self.author.username
 
     def last_20_messages():
         return Message.objects.order_by('timestamp').all()[:20]
+

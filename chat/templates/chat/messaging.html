@@ -36,8 +36,11 @@
     <script src="{% static 'chat/js/main.js' %}"></script>
     <script src="{% static 'chat/js/reconnecting-websocket.js' %}"></script>
     <script>
-        //var chatList = document.getElementById('chat-log');
-        //chatList.scrollTop = chatList.scrollHeight;
+        //when new_message sent, seen=false
+        //when fetch_messages sent, seen=true
+
+        var chatList = document.getElementById('chat-log');
+        chatList.scrollTop = chatList.scrollHeight;
 
         var roomName = {{ room_name }};
         var username = {{ username }};
@@ -78,7 +81,8 @@
             chatSocket.send(JSON.stringify({
                 'command': 'new_message',
                 'message': message,
-                'from': username
+                'from': username,
+                //'seen': False
                 //'to': room_name
             }));
             messageInputDom.value = '';

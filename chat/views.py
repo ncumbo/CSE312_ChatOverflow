@@ -9,10 +9,14 @@ from django.contrib.auth.models import User
 
 
 def index(request):      #messages = index
+    last_message_seen = "index:", Message.objects.reverse()[0].seen
+    print("last message type: ", last_message_seen)
+    #seen?
     try:
         friend = Friend.objects.get(currentUser=request.user)
         context = {
             'friends': friend.users.all(),
+            'last_message_seen': last_message_seen[1]
         }
     except Friend.DoesNotExist:
         context = {
@@ -23,11 +27,11 @@ def index(request):      #messages = index
 
 @login_required
 def room(request, room_name):
-    #Message
 
     context = {
         'room_name': mark_safe(json.dumps(room_name)),
         'username': mark_safe(json.dumps(request.user.username)),
+        #'seen': Message.objects.get('seen'),
     }
     return render(request, 'chat/messaging.html', context)
 
