@@ -40,6 +40,9 @@
 
 
     <h2>Comments</h2>
+    <a href="{% url 'create-comment' post.id %}">
+        <button type="button" class="btn btn-sm mt-1 mb-1">Create Comment</button>
+    </a>
     {% for comment in comments %}
         <div class="media content-section">
         <div class="media-body">
@@ -50,15 +53,15 @@
             <div class="article-content">{{ comment.content }}</div>
         </div>
         </div>
+    {% empty %}
+        <div class="article-content">No Comments</div>
     {% endfor %}
 
-    <div>
-        <form method="POST">
-            {% csrf_token %}
-            {{ form }}
-            <button type="button" class="btn btn-sm mt-1 mb-1">Submit</button>
-         </form>
-    </div>
+{#    <form id="create-form" method="POST" enctype="multipart/form-data">#}
+{#        {% csrf_token %}#}
+{#        {{ form }}#}
+{#        <button type="button" class="btn btn-sm mt-1 mb-1">Submit</button>#}
+{#    </form>#}
 
 
 {% endblock content %}

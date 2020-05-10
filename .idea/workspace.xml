@@ -23,15 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chat/migrations/0004_auto_20200510_1800.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat/migrations/0005_auto_20200510_1807.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/templates/feed/create_comment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/static/chat/css/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/chat/static/chat/css/chat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/templates/chat/messaging.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/messaging.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/post_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +149,8 @@
       <workItem from="1588864409182" duration="28726000" />
       <workItem from="1588948989404" duration="9826000" />
       <workItem from="1588985763631" duration="18409000" />
-      <workItem from="1589133270652" duration="4076000" />
+      <workItem from="1589133270652" duration="7328000" />
+      <workItem from="1589145356671" duration="4795000" />
     </task>
     <servers />
   </component>
@@ -188,10 +188,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="250" y="354" width="550" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588717517418">
+    <state x="250" y="354" width="645" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589140722602">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="250" y="354" width="550" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1588717517418" />
+    <state x="250" y="354" width="645" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1589140722602" />
     <state x="263" y="301" width="370" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589126093331">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

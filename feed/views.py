@@ -2,13 +2,17 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import FormMixin
-from django.views.generic import ListView, DetailView, CreateView, DeleteView, RedirectView, TemplateView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, RedirectView, FormView
 from django_xhtml2pdf.views import PdfMixin
 from .models import Post, Comment, Friend
 from .forms import CommentForm
 
 #P3
 from django.contrib.auth.models import User
+from django.urls import reverse
+from django import forms
+from django.http import HttpResponseForbidden
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     context = {
@@ -28,22 +32,24 @@ class PostListView(ListView):
         context['users'] = User.objects.all()
         return context
 
+class PostDownloadPDF(PdfMixin, DetailView):
+    model = Post
+
+class PostDetailForm(forms.Form):
+    message = forms.CharField()
 
 class PostDetailView(FormMixin, DetailView):
     model = Post
-    form_class = CommentForm
+    form_class = PostDetailForm
 
     def get_context_data(self, **kwargs):
         context = super(PostDetailView, self).get_context_data()
-        print(kwargs)
-        print(self.kwargs.get('pk'))
-        print(Comment.objects.filter(post_id=self.kwargs.get('pk')))
-
+        # print(kwargs)
+        # print(self.kwargs.get('pk'))
+        # print(Comment.objects.filter(post_id=self.kwargs.get('pk')))
         context['comments'] = Comment.objects.filter(post_id=self.kwargs.get('pk'))
         return context
 
-class PostDownloadPDF(PdfMixin, DetailView):
-    model = Post
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
@@ -53,9 +59,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form): #overriding createView to add author before form submitted
         form.instance.username = self.request.user    #set author to current signed in user
-        return super().form_valid(form) 
-
-    #something here for ajax
+        return super().form_valid(form)
 
 
 class PostDeleteView(LoginRequiredMixin, DeleteView):
@@ -94,6 +98,8 @@ def friends(request):
 
     return render(request, 'feed/friends.html', context)
 
+
+
 def updateFriendsList(request, operation, pk):
     newFriend = User.objects.get(pk=pk)
     if operation == 'add':
@@ -123,6 +129,20 @@ def view_profile(request, pk=None):
     return render(request, 'users/view_profiles.html', context)
 
 
+@login_required
+def create_comment(request, pk):
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = Comment() #instantiate new comment
+            comment.post_id = pk
+            comment.user_id = request.user.id
+            comment.content = form.cleaned_data['content']
+            comment.date_posted = form.cleaned_data['date_posted']
+            comment.save()
+            return redirect('/')
+    else:
+        form = CommentForm()
 
-def messages(request):
-    return render(request, 'feed/messages.html', {'username': 'ncumbo'})
+    context = {'form': form}
+    return render(request, 'feed/create_comment.html', context)
