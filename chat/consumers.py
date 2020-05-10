@@ -5,16 +5,18 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from channels.layers import get_channel_layer
 
-from .models import Message
+from .models import Message, Room
 
 class ChatConsumer(WebsocketConsumer):
     # get old messages
     def fetch_messages(self, data):
         print('fetch')
         messages = Message.last_20_messages()
+        print(messages.values())
+        fetch_seen = True       #turn all messages seen values = to true
         content = {
             'command': 'messages',
-            'messages': self.messages_to_json(messages)
+            'messages': self.messages_to_json(messages, fetch_seen)
         }
         self.send_message(content)
 
@@ -26,22 +28,20 @@ class ChatConsumer(WebsocketConsumer):
         print('new message')
         author = data['from']   #from User loggedin
         author_user = User.objects.filter(username=author)[0]
-        #author to
+        new_message_seen = False
         message = Message.objects.create(
             author=author_user,
-            content=data['message']
+            content=data['message'],
+            seen=False,     #new
         )
         content = {
             'command': 'new_message',
-            'message': self.message_to_json(message),
+            'message': self.message_to_json(message, new_message_seen),
         }
         return self.send_chat_message(content)
 
     def send_chat_message(self, message):
-        # Send message to room group
-        channel_layer = get_channel_layer()     #new
-        #async_to_sync(self.channel_layer.group_send)( #old
-        async_to_sync(channel_layer.group_send)(   #new
+        async_to_sync(self.channel_layer.group_send)( #old
             self.room_group_name,
             {
                 'type': 'chat_message',
@@ -54,18 +54,19 @@ class ChatConsumer(WebsocketConsumer):
         self.send(text_data=json.dumps(message))    # Send message to WebSocket
 
     #parse message to json
-    def messages_to_json(self, messages):
+    def messages_to_json(self, messages, fetch_seen):
         result = []
         for mess in messages:
-            result.append(self.message_to_json(mess))
+            result.append(self.message_to_json(mess, fetch_seen))
         return result
 
-    def message_to_json(self, message):     #json message from model
+    def message_to_json(self, message, seen):     #json message from model
         return {
             'id': message.id,
             'author': message.author.username,
             'content': message.content,
             'timestamp': str(message.timestamp),
+            'seen': seen    #new
         }
 
     commands = {

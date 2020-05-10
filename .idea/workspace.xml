@@ -23,12 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Django Channels Report.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReconnectingWebSocket Report.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Redis Report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/migrations/0004_auto_20200510_1800.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/migrations/0005_auto_20200510_1807.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django Report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Django Report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/messaging.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/static/chat/css/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/chat/static/chat/css/chat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/templates/chat/messaging.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/messaging.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +149,8 @@
       <workItem from="1588713134893" duration="29825000" />
       <workItem from="1588864409182" duration="28726000" />
       <workItem from="1588948989404" duration="9826000" />
-      <workItem from="1588985763631" duration="9264000" />
+      <workItem from="1588985763631" duration="18409000" />
+      <workItem from="1589133270652" duration="4076000" />
     </task>
     <servers />
   </component>
@@ -189,9 +192,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="250" y="354" width="550" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1588717517418" />
-    <state x="466" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588964116290">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state x="263" y="301" width="370" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589126093331">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
+    <state x="263" y="301" width="370" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1589126093331" />
     <state x="263" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1587325734984" />
     <state x="466" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.3773.1053@67.27.3773.1053" timestamp="1588964116290" />
     <state x="227" y="405" width="518" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1588786767566">
@@ -232,6 +236,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="67" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1587055210507" />
+    <state x="908" y="27" width="810" height="766" key="dock-window-1" timestamp="1589136894542">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="908" y="27" width="810" height="766" key="dock-window-1/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1589136894542" />
     <state x="356" y="257" width="670" height="58" key="search.everywhere.popup" timestamp="1588976483586">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

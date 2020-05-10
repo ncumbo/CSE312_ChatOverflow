@@ -16,5 +16,23 @@
 {% endblock content %}
 
 {% block javascript %}
+    <script>
+    document.getElementById('create-form').addEventListener("click", function () {
+        var contentElem = document.getElementsByTagName("textarea").namedItem("content");
 
+        var data = contentElem.innerText;
+
+        for(var eachElem in data){
+            var elem = data[eachElem];
+            if(elem === '<'){
+                elem.innerHTML = elem.innerHTML.replace(/</g,'&lt;');
+            }
+            if(elem === '>'){
+                elem.innerHTML = elem.innerHTML.replace(/>/g,'&gt;');
+            }
+
+        }
+        console.log("data", data);
+    })
+    </script>
 {% endblock javascript %}

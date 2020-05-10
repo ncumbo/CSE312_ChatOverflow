@@ -1,4 +1,9 @@
 {% extends "feed/base.html" %}
+{% load static %}
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static 'chat/css/chat.css' %}">
+{% endblock stylesheet %}
+
 {% block content %}
     <div class="modal-title">
         <div class="current-friends">
@@ -6,7 +11,17 @@
             {% for friend in friends %}
                 <a href="{% url 'chat:room' friend.username %}">
                     <div class="users">
-                    <h5>{{ friend.username }}</h5>
+                    {% if last_message_seen == True %}
+                        <h5>{{ friend.username }}</h5>
+                        <div>
+                            <p class="any-new-message">No New Messages</p>
+                        </div>
+
+                    {% elif last_message_seen == False %}
+                        <h5>{{ friend.username }}</h5>
+                        <b><p class="any-new-message">New Messages Available</p></b>
+                    {% endif %}
+
                 </div>
                 </a>
             {% endfor %}
