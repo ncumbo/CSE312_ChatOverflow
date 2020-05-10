@@ -1,38 +1,61 @@
 {% extends "feed/base.html" %}
-{% load crispy_forms_tags %}
+
 {% block content %}
-    <div class="modal-title">
-        <h1>Feed</h1>
-        {% if user.is_authenticated %}
-            <p>Click here to create a post:   <a href="{% url 'feed-create' %}"><button class="btn btn-info create-post" >Create Post</button></a> </p>
-            <small>Click on username to download or delete a post</small>
-        {% endif %}
-   </div>
+<div class="modal-title">
+  <h1>Feed</h1>
+  {% if user.is_authenticated %}
+  <a href="{% url 'feed-create' %}"><button class="btn btn-info create-post" >Create Post</button></a>
+  <p>Click username to Download or Delete a post</p>
+  {% endif %}
+</div>
+
+{% for post in posts %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="{% url 'feed-detail' post.id %}">{{ post.username }}</a>
+      <small class="text-muted">{{ post.date_posted }}</small>
+    </div>
+    <p class="article-content" >{{ post.content }}</p>
+  </div>
+  <div class="icons">
+
+    <button type="button" onclick="likeButton()" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+      <span >Like</span>
+    </button>
+    <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+      <span >Dislike</span>
+    </button>
+    <button type="button" onclick="comment()"class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+      <span>Comment</span>
+    </button>
+    <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
+      <span >Follow</span>
+    </button>
+  </div>
+
+  <div class="icons">
+
+    <p id="like"></p>
+    <p id="dislike"></p>
+    <p id="comment"></p>
+    <p id="follow"></p>
 
 
-    {% for post in posts %}
-        <article class="media content-section">
-            <div class="media-body">
-                <div class="article-metadata">
-                    <a class="mr-2" href="{% url 'feed-detail' post.id %}">{{ post.username }}</a>
-                    <small class="text-muted">{{ post.date_posted }}</small>
-                </div>
-                <p class="article-content" >{{ post.content }}</p>
-                <img class="image-ori" src="{{ post.image.url }}">
-            </div>
+  </div>
+</article>
+{% endfor %}
 
-            <div class="icons">
-                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                    <span >Likes</span>
-                </button>
-                <a href="{% url 'feed-detail' post.id %}">
-                <button type="button" class="btn btn-sm mt-1 mb-1" aria-label="Left Align">
-                    <span>Comments</span>
-                </button>
-                </a>
-            </div>
-        </article>
-    {% endfor %}
-
-    <!-- Create a post section -->
+<!-- Create a post section -->
 {% endblock content %}
+
+{% block javascript %}
+
+function likeButton(){
+
+}
+
+function comments(){
+
+}
+{% endblock javascript %}

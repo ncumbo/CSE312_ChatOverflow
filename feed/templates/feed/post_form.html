@@ -2,14 +2,15 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="content-section">
-    <h2 class="modal-title align-center">Submit a photo that cooresponds with your post! </h2>
-    <hr/>
-    <legend class="border-bottom mb-4">Create a post</legend>
-    <form id="create-form" method="POST" enctype="multipart/form-data"> <!--replace POST for websocket-->
+    <h2 class="modal-title align-center">'"What's happening?" - Twitter' - Chat Overflow</h2>
+    <form id="create-form" method="POST">
         {% csrf_token %} <!-- Protects form against attacks -->
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Create a post</legend>
             {{ form|crispy }}
+        </fieldset>
         <div class="form-group">
-            <input type="submit" id="form-data" class="btn btn default" value="Submit"/>
+            <button class="btn btn-default" type="submit">Submit</button>
         </div>
     </form>
 </div>
@@ -17,22 +18,6 @@
 
 {% block javascript %}
     <script>
-    document.getElementById('create-form').addEventListener("click", function () {
-        var contentElem = document.getElementsByTagName("textarea").namedItem("content");
 
-        var data = contentElem.innerText;
-
-        for(var eachElem in data){
-            var elem = data[eachElem];
-            if(elem === '<'){
-                elem.innerHTML = elem.innerHTML.replace(/</g,'&lt;');
-            }
-            if(elem === '>'){
-                elem.innerHTML = elem.innerHTML.replace(/>/g,'&gt;');
-            }
-
-        }
-        console.log("data", data);
-    })
     </script>
 {% endblock javascript %}

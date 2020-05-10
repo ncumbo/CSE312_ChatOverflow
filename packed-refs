@@ -1,0 +1,12 @@
+# pack-refs with: peeled fully-peeled sorted 
+f5bdc2b45e60686ea50a08c9f266a06966f3cbe2 refs/remotes/origin/Friends
+45ba6b74f0ce919432c667adbcf4ba24b36d5d1e refs/remotes/origin/likes
+0ee0e636c617ecff11c29961838a09839ac7cdb3 refs/remotes/origin/master
+e6b52acba666f25941c472ac751acd8ebdbbee54 refs/remotes/origin/nick-phase3
+065a3cc482c98788a1a174db5d689d7e74018529 refs/remotes/origin/nickCumbo
+b338196b41ac5cbd68000dd3a9268b3e82d4dcae refs/remotes/origin/pp2-nick
+64a4f44bbe6b3e3d1e879337e007d701e5df5513 refs/remotes/origin/pp2-nick-linux
+7e725b6e884eba5a8c4f67fc0313921049ab13ff refs/remotes/origin/project_phase_2
+39b5fd1a289a42c2335018c6a66553073404af6b refs/remotes/origin/will
+bebb36f4f646e820f3f508280c1206baeabfe735 refs/remotes/origin/will-phase2
+83aa20f9cd4a7e86ed9688718e803dbde48a16c3 refs/remotes/origin/will-phase3

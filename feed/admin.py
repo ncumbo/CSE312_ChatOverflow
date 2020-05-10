@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, Friend
+from .models import Post
 
 # Register your models here to show up on admin page
-admin.site.register(Comment)
-admin.site.register(Friend)
+#admin.site.register(Post)
