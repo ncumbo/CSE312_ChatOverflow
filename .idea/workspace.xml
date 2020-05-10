@@ -23,13 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Django Channels Report.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReconnectingWebSocket Report.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Redis Report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/consumers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/routing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meme_photos/default_image_DEionE7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meme_photos/gorgeousisland.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/meme_photos/jump_aksbSoV.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django Report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Django Report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/messaging.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Redis Report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Redis Report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/templates/chat/messaging.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat/templates/chat/messaging.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatOverflow_proj/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatOverflow_proj/routing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/messages.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/templates/feed/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/post_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +155,7 @@
       <workItem from="1588713134893" duration="29825000" />
       <workItem from="1588864409182" duration="28726000" />
       <workItem from="1588948989404" duration="9826000" />
-      <workItem from="1588985763631" duration="9264000" />
+      <workItem from="1588985763631" duration="16989000" />
     </task>
     <servers />
   </component>
@@ -189,9 +197,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="250" y="354" width="550" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1588717517418" />
-    <state x="466" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588964116290">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state x="263" y="301" width="370" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589126093331">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
+    <state x="263" y="301" width="370" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1589126093331" />
     <state x="263" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1587325734984" />
     <state x="466" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.3773.1053@67.27.3773.1053" timestamp="1588964116290" />
     <state x="227" y="405" width="518" height="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1588786767566">

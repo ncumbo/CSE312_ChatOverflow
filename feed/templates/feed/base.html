@@ -62,17 +62,26 @@
     <!-- jquery library -->
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     {% block javascript %}
-        <script>
-            var codeEls = document.getElementsByTagName('code');
-            for(var i in codeEls)
-            {
-                if(parseInt(i)==i)
-                {
-                    var codeEl = codeEls[i];
-                    if(codeEl.className.match(/\bcodeIt\b/)!==null) codeEl.innerHTML = codeEl.innerHTML.replace(/</g,'&lt;').replace(/>/g,'&gt;')
-                }
+
+    <script>
+    document.getElementById('create-form').addEventListener("click", function () {
+        var contentElem = document.getElementsByTagName("textarea").namedItem("content");
+
+        var data = contentElem.innerText;
+
+        for(var eachElem in data){
+            var elem = data[eachElem];
+            if(elem === '<'){
+                elem.innerHTML = elem.innerHTML.replace(/</g,'&lt;');
             }
-        </script>
+            if(elem === '>'){
+                elem.innerHTML = elem.innerHTML.replace(/>/g,'&gt;');
+            }
+
+        }
+        console.log("data", data);
+    })
+    </script>
 
     {% endblock javascript %}
 </body>

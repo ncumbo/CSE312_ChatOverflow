@@ -3,8 +3,9 @@ Redis report:
 What does this technology do for us.
 
 This is an open source framework used with django channels that is a
-memory data backing store for messages. It supports the instant messaging
-application in this project by allowing the messages to go this Redis layer.
+memory data backing store for messages as well as being a single-server for
+shared configurations. It supports the instant messaging application in this
+project by allowing the messages to go this Redis layer.
 
 How does this technology accomplish what it does.
 

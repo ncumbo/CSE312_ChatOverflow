@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from channels.layers import get_channel_layer
 
-from .models import Message
+from .models import Message, Room
 
 class ChatConsumer(WebsocketConsumer):
     # get old messages
@@ -40,8 +40,8 @@ class ChatConsumer(WebsocketConsumer):
     def send_chat_message(self, message):
         # Send message to room group
         channel_layer = get_channel_layer()     #new
-        #async_to_sync(self.channel_layer.group_send)( #old
-        async_to_sync(channel_layer.group_send)(   #new
+        async_to_sync(self.channel_layer.group_send)( #old
+        #async_to_sync(channel_layer.group_send)(   #new
             self.room_group_name,
             {
                 'type': 'chat_message',

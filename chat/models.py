@@ -3,13 +3,15 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
-#User = get_user_model()
+class Room(models.Model):
+    room_name = models.TextField()
 
 class Message(models.Model):
     author = models.ForeignKey(User, related_name='author_messages', on_delete=models.CASCADE)
     content = models.TextField()
     timestamp = models.DateTimeField(default=timezone.now)  #auto_now_add=True
 
+    #read = models.BooleanField
     #userMessaged = models.ForeignKey(User, related_name='user_to_messages', on_delete=models.CASCADE)
 
     def __str__(self):
