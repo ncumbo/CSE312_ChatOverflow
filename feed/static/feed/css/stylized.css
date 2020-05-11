@@ -81,6 +81,7 @@ h1, p, small{
     padding: 0 20px;
 }
 
+/* feed class=. id=#*/
 .btn{
     background: #777a80;
     border-color: #5a92f2;
@@ -99,10 +100,11 @@ span{
     color: white;
 }
 
-/*friends.html*/
-.friends{
-
+#like button{
+    color: white;
 }
+
+
 
 .users{
     border: 1px solid grey;

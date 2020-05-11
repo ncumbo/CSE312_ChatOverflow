@@ -2,7 +2,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import FormMixin
-from django.views.generic import ListView, DetailView, CreateView, DeleteView, RedirectView, FormView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView
 from django_xhtml2pdf.views import PdfMixin
 from .models import Post, Comment, Friend
 from .forms import CommentForm
@@ -13,6 +13,9 @@ from django.urls import reverse
 from django import forms
 from django.http import HttpResponseForbidden
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.template.loader import render_to_string
+
 
 def home(request):
     context = {
@@ -38,9 +41,10 @@ class PostDownloadPDF(PdfMixin, DetailView):
 class PostDetailForm(forms.Form):
     message = forms.CharField()
 
-class PostDetailView(FormMixin, DetailView):
+class PostDetailView(DetailView):
     model = Post
-    form_class = PostDetailForm
+    fields = ['likes']              #new - tim
+    total_likes = 'total_likes'     #new - tim
 
     def get_context_data(self, **kwargs):
         context = super(PostDetailView, self).get_context_data()
@@ -48,6 +52,7 @@ class PostDetailView(FormMixin, DetailView):
         # print(self.kwargs.get('pk'))
         # print(Comment.objects.filter(post_id=self.kwargs.get('pk')))
         context['comments'] = Comment.objects.filter(post_id=self.kwargs.get('pk'))
+
         return context
 
 
@@ -65,16 +70,6 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 class PostDeleteView(LoginRequiredMixin, DeleteView):
     model = Post
     success_url = '/'
-
-class PostLike(RedirectView):
-    def get_redirect_url(self, *args, **kwargs):
-        slug = self.kwargs.get("slug")
-        obj = get_object_or_404(Post, slug=slug)
-        url = obj.get_absolute_url()
-        user = self.request.user
-        if user.is_authenticated():
-            obj.likes.add(user)
-        return 1
 
 def friends(request):
     try:
@@ -128,7 +123,7 @@ def view_profile(request, pk=None):
     context = {'user': user}
     return render(request, 'users/view_profiles.html', context)
 
-
+#comments
 @login_required
 def create_comment(request, pk):
     if request.method == 'POST':
@@ -146,3 +141,22 @@ def create_comment(request, pk):
 
     context = {'form': form}
     return render(request, 'feed/create_comment.html', context)
+
+#likes
+#@login_required
+def like_post(request):
+    post = get_object_or_404(Post, id=request.POST.get('id'))
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user)
+        is_liked = False
+    else:
+        post.likes.add(request.user)
+        is_liked = True
+    context ={
+        'post': post,
+        'is_liked': is_liked,
+        'total_likes': post.total_likes(),
+    }
+    if request.is_ajax():
+        html = render_to_string('feed/like_section.html', context, request=request)
+        return JsonResponse({'form': html})
