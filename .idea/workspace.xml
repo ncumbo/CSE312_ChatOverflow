@@ -23,12 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="702bcb23-7885-47dc-b768-4878bcdc60c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/feed/templates/feed/create_comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feed/templates/feed/like_section.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/static/feed/css/stylized.css" beforeDir="false" afterPath="$PROJECT_DIR$/feed/static/feed/css/stylized.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/templates/feed/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/feed/templates/feed/post_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feed/tests.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feed/views.py" afterDir="false" />
     </list>
@@ -150,7 +149,7 @@
       <workItem from="1588948989404" duration="9826000" />
       <workItem from="1588985763631" duration="18409000" />
       <workItem from="1589133270652" duration="7328000" />
-      <workItem from="1589145356671" duration="4795000" />
+      <workItem from="1589145356671" duration="12181000" />
     </task>
     <servers />
   </component>
@@ -236,6 +235,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="67" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1587055210507" />
+    <state x="603" y="166" width="770" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589169040545">
+      <screen x="67" y="27" width="3773" height="1053" />
+    </state>
+    <state x="603" y="166" width="770" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.3773.1053@67.27.3773.1053" timestamp="1589169040545" />
     <state x="908" y="27" width="810" height="766" key="dock-window-1" timestamp="1589136894542">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

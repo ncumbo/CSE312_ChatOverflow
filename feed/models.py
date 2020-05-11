@@ -21,6 +21,9 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('feed-detail', kwargs={'pk': self.pk})
 
+    def total_likes(self):
+        return self.likes.count()
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
