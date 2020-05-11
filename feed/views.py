@@ -72,6 +72,8 @@ def messages(request):
 
 def like_post(request):
     post = get_object_or_404(Post, id=request.POST.get('id'))
+    print("hereee")
+    print(post)
     if post.likes.filter(id=request.user.id).exists():
         post.likes.remove(request.user)
         is_liked = False
